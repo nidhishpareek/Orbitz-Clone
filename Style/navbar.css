@@ -17,6 +17,7 @@ flex-direction: column;
         font-size: 0.875rem;
         font-weight: 500;
         width: 100%;
+        height: 72px;
     /* align-items: center; */
     
 }
@@ -35,17 +36,17 @@ flex-direction: column;
     display: flex;
     align-items: center;
 }
-#last a,#last p{
+#last>div> a{
     color: white;
     text-decoration: none;
 padding: 0.25rem 1rem;
 }
-#last a:hover{
+#last>div> a:hover{
     background: none;
         color: #00a4bb;
         fill: #00a4bb;
 }
-#last p:hover{background: none;
+#last>div> p:hover{background: none;
 color: #00a4bb;
 fill: #00a4bb;
 }
@@ -68,3 +69,5 @@ fill: #00a4bb;
                 min-inline-size: 1.125rem;
 
 }
+
+ 

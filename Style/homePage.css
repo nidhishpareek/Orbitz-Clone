@@ -1,0 +1,43 @@
+
+#serachItem {
+    position: absolute;
+    display: none;
+     
+    left: 36px;
+    top: 118px;
+    height: 500px;
+    width: 31.1%;
+    background-color:white;
+    border: 1px solid black;
+    overflow: scroll;
+    max-height: 400px;
+
+}
+#flightBox{
+    
+    position: relative;
+}
+#serachItem>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 40px; */
+    /* margin: 10px; */
+    /* padding: 20px; */
+ 
+  
+}
+#serachItem>div h4{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px auto;
+}
+#serachItem>div>div{
+    margin-right: 10px;
+}
+#serachItem>div:hover{
+    background-color: aquamarine;
+}
+#serachItem hr{
+    margin: 0;
+}
