@@ -1,0 +1,73 @@
+body {
+  /* margin: 0px; */
+}
+#triptype,
+#travellers,
+.topbtn {
+  border: none;
+  color: rgb(15, 131, 146);
+}
+.travellersdropdown.travellersdropdown {
+  width: 265px;
+  padding: 20px;
+  border-radius: 20px;
+  color: rgb(78, 78, 78);
+}
+.travellersdropdown.travellersdropdown {
+  padding: 10px;
+}
+
+.travellersdropdown > li {
+  margin: 10px;
+}
+.travelerstext > p {
+  margin: 0px;
+}
+.travelersdiv {
+  display: flex;
+  justify-content: space-between;
+}
+.travelersbtns {
+  display: flex;
+  align-items: baseline;
+}
+
+.minusbtn,
+.plusbtn {
+  padding: 10px 20px;
+  border-radius: 50%;
+  border: 1px solid rgb(136, 136, 136);
+}
+.passangercount {
+  padding-inline: 10px;
+}
+
+.planeclassid {
+  width: 85px;
+  border: none;
+  color: rgb(15, 131, 146);
+}
+.planeclassid > option {
+  color: black;
+}
+
+.travelpopupbtndiv{
+  text-align: center; 
+}
+.travelpopupbtndiv button{
+  width: 40%;
+}
+.moredropdownoption *{
+    width: 70px;
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    padding: 0px 10px;
+}
+.moredropdownoption > li{
+    width: 70px;
+}
+
+.moredropdownoption p{
+    padding-left: 10px;
+}

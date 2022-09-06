@@ -1,1 +1,10 @@
 ok
+
+flight_date
+
+
+airline_name by the top 100 results
+
+duration by arrival and departure
+
+plane_class
