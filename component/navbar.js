@@ -1,5 +1,5 @@
-export const navbar=()=>{
-    return `
+export const navbar = () => {
+  return `
      <div id="navbar-div">
             <div id="first">
              <div id="logo-nav">
@@ -29,10 +29,15 @@ arrow_drop_down
                 <div>
                     <a href="">Trips</a>
                 </div>
-                <div>
-                    <a href="">Sign in</a>
-                </div>
+                <div class="w3-dropdown-click">
+    <button onclick="myFunction()" class="w3-button w3-black">Sign in</button>
+    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom">
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+  </div>
             </div>
         </div>
     `;
-}
+};
