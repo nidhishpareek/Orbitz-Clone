@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "dkd",
+      "email": "dk@gk.com",
+      "password": 123,
+      "id": 2
+    },
+    {
+      "name": "dkd",
+      "email": "dk@gk.com",
+      "password": 123,
+      "id": 3
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "123",
+      "id": 4
+    },
+    {
+      "email": "yo@gmail.com",
+      "fname": "yi",
+      "lname": "yo",
+      "password": "yo",
+      "id": 5
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "1234567",
+      "id": 7
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "1234567",
+      "id": 11
+    },
+    {
+      "email": "singhyogesh627@gmail.com",
+      "fname": "YOGESH",
+      "lname": "SINGH",
+      "password": "1234567",
+      "id": 12
+    }
+  ]
+}
