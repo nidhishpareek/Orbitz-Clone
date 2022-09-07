@@ -20,7 +20,7 @@ background-image: url("https://forever.travel-assets.com/flex/flexmanager/images
             content-visibility: unset;
             transition: opacity 1s;
     /* background-attachment: fixed; */
-    /* height: 500px; */
+    height: auto;
     
 }
 #search-body{
@@ -34,6 +34,9 @@ background-image: url("https://forever.travel-assets.com/flex/flexmanager/images
     
     background-color:#fefffe;
 }
+h1{
+     font-weight: bold !important;
+}
  
 #hotel-option{
     display: flex;
@@ -46,7 +49,7 @@ background-image: url("https://forever.travel-assets.com/flex/flexmanager/images
 }
 #hotel-option p{
     color: #616161;
-        font-size: 0.875rem;
+        font-size: 14px;
         font-weight: 550;
         line-height: 1.125rem;
     margin: 10px auto;
@@ -61,17 +64,17 @@ hr{
 
 
 } */
-#first-box{
+.first-box{
     width: 50% !important;
 }
-#sec-box{
+.sec-box{
     width: 15% !important;
 
 }
-#third-box{
+.third-box{
 width: 15% !important;
 }
-#forth-box{
+.forth-box{
 width: 20% !important;
 }
 
@@ -83,10 +86,12 @@ width: 20% !important;
         align-items: center;
         width: 95%;
         margin:10px auto;
+        /* position: relative; */
       
 }
 #searchDiv>div{
     appearance: none;
+    height: 50px;
         background-color: #FFFFFF;
         border: 1px solid #999999;
         border-radius: 2px;
@@ -99,23 +104,23 @@ width: 20% !important;
 }
 #para{
     color:white;
-    width: 75%;
+    width: 80% !important;
     margin: auto;
 }
-#first-box,#sec-box,#third-box,#forth-box{
+.first-box,.sec-box,.third-box,.forth-box{
     display: flex;
     align-items: center;
     padding: 5px;
  margin: 7px;
  height: 35px;
 }
-#search p{
+#searchDiv p{
     margin: 0 10px;
 }
 .heading{
     font-size: 12px;
 }
-#searchButton{
+.searchButton{
     display: block;
     margin:20px auto;
     background-color: #c93258;
@@ -138,14 +143,21 @@ flex-direction: column;
 
 }
 #check{
-    width: 95%;
+    width: 94%;
     margin:5px auto;
+    color: #616161;
+    
+        font-size: 0.875rem;
+        font-weight: 400;
 }
 #check>div{
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-left:2px ;
+}
+#check span{
+    margin-left:10px ;
 }
 #check>div:nth-child(2){
     margin-left:20px;
@@ -154,10 +166,7 @@ flex-direction: column;
     height: 18px;
     width: 18px;
 }
-#para{
-    width: 82% !important;
-    margin:20px auto;
-}
+ 
 #para>h2{
     display: block;
     margin: 0px auto;
@@ -354,4 +363,135 @@ width: 100%;
 #moreDesti>img{
     width: 100%;
 }
+#flightBox{
+    display: none;
+}
+#oneway{
+    display: flex;
+    justify-content: space-between;
+    width: 93.5%;
 
+    margin: auto;
+    
+}
+#oneway div{
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+#oneway p{
+    font-size: 14px;
+    margin:15px 5px;
+}
+#oneway>div:nth-child(1){
+        color: #616161;
+            font-size: 0.875rem;
+            font-weight: 500;
+            line-height: 1.29;
+}
+#oneway>div:nth-child(1)>div{
+    margin-right: 30px;
+}
+#oneway>div:nth-child(2){
+        background-color: transparent;
+            color: #007E8F;
+            font-weight: 400;
+            text-decoration: none;  
+            font-size: 0.875rem;
+}
+.first-box-flight {
+    width: 33% !important;
+  
+  
+}
+
+.sec-box-flight {
+    width: 33% !important;
+
+}
+
+.third-box-flight {
+    width: 15% !important;
+}
+
+.forth-box-flight {
+    width: 15% !important;
+}
+.w3-dropdown-content{
+    width: 375px;
+    border-radius: 5px;
+    /* margin: 20px; */
+    padding: 20px !important;
+    
+
+}
+.insideSignin{
+    font-weight: bold;
+    text-align: center;
+}
+ .button-signIn{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+ }
+ .w3-dropdown-content>div> p{
+        align-items: center;
+            background-color: transparent;
+            color: #1F1F1F;
+            display: flex;
+            font-size: 0.875rem;
+            font-weight: 400;
+            inline-size: 100%;
+            justify-content: flex-start;
+            line-height: 1.125rem;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+ }
+ .w3-dropdown-content>p{
+    
+            font-size: 1rem;
+            font-weight: 600;
+            height: 2.25rem;
+            /* margin-left: 0; */
+          
+            background-color: rgba(255, 255, 255, 0);
+                color: #007E8F;
+                border-radius: 2px;
+                inline-size: 100%;
+                text-align: center;
+
+ }
+ #carRenetel,#Packages,#thingsTodo,#Cruies{
+    display: none;
+ }
+ .dropdown-menu{
+    display: none;
+ }
+ #startDate,#endDate{
+    border: none;
+    width: 70%;
+    margin-left: 8.5px;
+ }
+ #startDate:focus{
+    outline: none;
+ }
+ #endDate:focus{
+    outline: none;
+ }
+#goingTo,
+#leavingFrom{
+    border: none;
+        width: 150%;
+        margin-left: 8.5px;
+        height: 100%;
+}
+#goingTo:focus{
+    outline: none;
+}
+#leavingFrom:focus{
+    outline: none;
+}

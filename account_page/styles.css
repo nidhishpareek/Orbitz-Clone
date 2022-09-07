@@ -1,0 +1,30 @@
+/* .subBtn a{
+    background-color: #EDF7FF;
+    color: #4A65BE;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+} */
+
+#btn {
+    padding-top: 50px;
+}
+
+#btn #active {
+    background-color: #00253C;
+    color: white;
+}
+#btn a {
+    text-decoration: none;
+    background-color: #EDF7FF;
+    color: #4A65BE;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    text-decoration: none;
+}
