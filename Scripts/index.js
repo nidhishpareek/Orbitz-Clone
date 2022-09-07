@@ -1,5 +1,7 @@
 // import { navbar } from "../component/navbar.js";
 
+import { footer } from "../component/footer.js";
+
 // import BasicDateRangePicker from "../component/datePicker.js";
 
 // document.getElementById("navbar").innerHTML=navbar();
@@ -33,6 +35,7 @@
 
 // BasicDateRangePicker;
  
+ document.getElementById("footer").innerHTML=footer();
 
 const changeDiv=()=>{
     document.getElementById("search").style.display="none"
