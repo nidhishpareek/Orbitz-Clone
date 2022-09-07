@@ -1,6 +1,7 @@
-body {
-  /* margin: 0px; */
+.container{
+  border: 1px solid black;
 }
+/* <!-- SEARCH AND FILTER PORTIONS STARTS HERE =----------> */
 #triptype,
 #travellers,
 .topbtn {
@@ -10,7 +11,7 @@ body {
 .travellersdropdown.travellersdropdown {
   width: 265px;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   color: rgb(78, 78, 78);
 }
 .travellersdropdown.travellersdropdown {
@@ -31,10 +32,15 @@ body {
   display: flex;
   align-items: baseline;
 }
+#triptype option {
+  color: black;
+  padding-inline: 200px;
+  padding-block: 5px;
+}
 
 .minusbtn,
 .plusbtn {
-  padding: 10px 20px;
+  padding: 5px 10px 5px 10px;
   border-radius: 50%;
   border: 1px solid rgb(136, 136, 136);
 }
@@ -51,23 +57,87 @@ body {
   color: black;
 }
 
-.travelpopupbtndiv{
-  text-align: center; 
+.travelpopupbtndiv {
+  text-align: center;
 }
-.travelpopupbtndiv button{
+.travelpopupbtndiv button {
   width: 40%;
 }
-.moredropdownoption *{
-    width: 70px;
-    display: flex;
-    align-items: baseline;
-    justify-content: left;
-    padding: 0px 10px;
+.moredropdownoption * {
+  width: 70px;
+  display: flex;
+  align-items: baseline;
+  justify-content: left;
+  padding: 0px 10px;
 }
-.moredropdownoption > li{
-    width: 70px;
+.moredropdownoption > li {
+  width: 70px;
 }
 
-.moredropdownoption p{
-    padding-left: 10px;
+.moredropdownoption p {
+  padding-left: 10px;
+}
+
+/* <!--=------------------- RESULTS PORTION ---------------------> */
+#filtersandresults{
+  display: flex;
+}
+#filter{
+  width: 265px;
+  padding-right: 5px;
+  margin: 10px;
+  border: 1px solid red;
+}
+#chooseflighttype {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  word-wrap: break-word;
+  justify-content: start;
+  align-items: none;
+  /* display: flex; */
+}
+
+#resultsouterdiv {
+  padding: 5px;
+}
+#chooseflighttype span {
+  width: max-content;
+}
+.currentlyactive {
+  font-weight: bold;
+}
+.flexdatepanel {
+  margin: 20px 0px;
+  display: flex;
+  padding: 10px 20px;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.flexibledateheading {
+  font-weight: bold;
+}
+#flexibledatearrow {
+  margin: auto;
+  margin-right: 10px;
+  justify-content: right;
+}
+#horizontaldivforupperportion{
+  margin-block: 10px;
+}
+#disclouser{
+  font-size: 12px;
+}
+#disclouserandsorting{
+  display: flex;
+  padding: 10px 20px;
+  text-align: left;
+  align-items: flex-end;
+}
+#selectsorting{
+  padding-block: 10px;
+}
+@media only screen and (max-width: 800px) {
+  #topfilterbuttonoptions {
+    display: none;
+  }
 }

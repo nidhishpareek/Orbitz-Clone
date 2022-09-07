@@ -20,14 +20,13 @@ document.getElementById("adultminus").addEventListener("click", () => {
 });
 
 document.getElementById("adultplus").addEventListener("click", () => {
-    if (travellersobj.adult < 6) {
-        travellersobj.adult++;
-        displaytravellers();
-      }
+  if (travellersobj.adult < 6) {
+    travellersobj.adult++;
+    displaytravellers();
+  }
 });
 
 document.getElementById("childrenminus").addEventListener("click", () => {
-  
   if (travellersobj.child != 0) {
     travellersobj.child--;
     displaytravellers();
@@ -35,24 +34,24 @@ document.getElementById("childrenminus").addEventListener("click", () => {
 });
 
 document.getElementById("childrenplus").addEventListener("click", () => {
-    if (travellersobj.child <6) {
-        travellersobj.child++;
-        displaytravellers();
-      }
+  if (travellersobj.child < 6) {
+    travellersobj.child++;
+    displaytravellers();
+  }
 });
 
 document.getElementById("infantminus").addEventListener("click", () => {
-    if (travellersobj.infant != 0) {
-        travellersobj.infant--;
-        displaytravellers();
-      }
+  if (travellersobj.infant != 0) {
+    travellersobj.infant--;
+    displaytravellers();
+  }
 });
 
 document.getElementById("infantplus").addEventListener("click", () => {
-    if (travellersobj.infant != 6) {
-        travellersobj.infant++;
-        displaytravellers();
-      }
+  if (travellersobj.infant != 6) {
+    travellersobj.infant++;
+    displaytravellers();
+  }
 });
 /////////////////////////////////////////////////////////////////////
-
+[]

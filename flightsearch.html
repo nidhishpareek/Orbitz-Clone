@@ -15,119 +15,184 @@
   </head>
 
   <body>
-    <div id="filteroptions">
-      <div class="btn-group topbtn dropdown triptypeclass">
-        <select name="" id="triptype" class="text-info">
-          <option value="">
-            One Way <span class="glyphicon glyphicon-chevron-down"></span>
-          </option>
-          <option value="">
-            Roundtrip<span class="glyphicon glyphicon-chevron-down"></span>
-          </option>
-          <option value="">
-            Multi-city <span class="glyphicon glyphicon-chevron-down"></span>
-          </option>
-        </select>
+    <div class="container">
+      <div id="topfilterbuttonoptions">
+        <div class="btn-group btn topbtn dropdown triptypeclass">
+          <select class="form-select text-info" name="" id="triptype">
+            <option value="">
+              One Way <span class="glyphicon glyphicon-chevron-down"></span>
+            </option>
+            <option value="">
+              Roundtrip<span class="glyphicon glyphicon-chevron-down"></span>
+            </option>
+            <option value="">
+              Multi-city <span class="glyphicon glyphicon-chevron-down"></span>
+            </option>
+          </select>
+        </div>
+
+        <div class="btn-group btn topbtn dropdown travellersdropdowndiv">
+          <button
+            class="btn btn-default topbtn dropdown-toggle text-info"
+            type="button"
+            id="travellers"
+            data-toggle="dropdown"
+          >
+            Traveler
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+
+          <ul class="dropdown-menu travellersdropdown">
+            <li><p>We allow up to 6 travelers total per booking.</p></li>
+            <li>
+              <div class="travelersdiv">
+                <div class="travelerstext">
+                  <p>Adults</p>
+                  <p>18 and older</p>
+                </div>
+                <div class="travelersbtns">
+                  <button id="adultminus" class="minusbtn">-</button>
+                  <p id="adultcount" class="passangercount">1</p>
+                  <button id="adultplus" class="plusbtn">+</button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="travelersdiv">
+                <div class="travelerstext">
+                  <p>Children</p>
+                  <p>Age 2 through 17</p>
+                </div>
+                <div class="travelersbtns">
+                  <button id="childrenminus" class="minusbtn">-</button>
+                  <p id="childrencount" class="passangercount">1</p>
+                  <button id="childrenplus" class="plusbtn">+</button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="travelersdiv">
+                <div class="travelerstext">
+                  <p>Infants</p>
+                  <p>Younger than 2</p>
+                </div>
+                <div class="travelersbtns">
+                  <button id="infantminus" class="minusbtn">-</button>
+                  <p id="infantcount" class="passangercount">1</p>
+                  <button id="infantplus" class="plusbtn">+</button>
+                </div>
+              </div>
+            </li>
+            <li><p class="text-info">Airline age rules</p></li>
+            <li class="travelpopupbtndiv">
+              <button class="btn btn-default travenpopupbtn">Cancel</button>
+              <button class="btn btn-default travenpopupbtn">Done</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-group btn topbtn planeclass">
+          <select name="" class="planeclassid">
+            <option value="">Economy</option>
+            <option value="">Premium Economy</option>
+            <option value="">Buisness Class</option>
+            <option value="">First Class</option>
+          </select>
+        </div>
+
+        <div class="btn-group btn topbtn airlinedropdown">
+          <select name="" class="topbtn" id="airllinefilter">
+            <option value="">Any Airline</option>
+          </select>
+        </div>
+
+        <div class="btn-group btn topbtn dropdown moreoptiondiv">
+          <button
+            class="btn btn-default topbtn dropdown-toggle text-info"
+            type="button"
+            id="travellers"
+            data-toggle="dropdown"
+          >
+            More Options
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+
+          <ul class="dropdown-menu moredropdownoption">
+            <li>
+              <input type="checkbox" name="" id="" />
+              <p>Nonstop</p>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="" />
+              <p>Refundable</p>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div class="btn-group topbtn dropdown travellersdropdowndiv">
-        <button
-          class="btn btn-default topbtn dropdown-toggle text-info"
-          type="button"
-          id="travellers"
-          data-toggle="dropdown"
-        >
-          Traveler
-          <span class="glyphicon glyphicon-chevron-down"></span>
-        </button>
+      <div id="searchbardiv"></div>
 
-        <ul class="dropdown-menu travellersdropdownF">
-          <li><p>We allow up to 6 travelers total per booking.</p></li>
-          <li>
-            <div class="travelersdiv">
-              <div class="travelerstext">
-                <p>Adults</p>
-                <p>18 and older</p>
+      <!-- SEARCH AND FILTER PORTIONS STARTS HERE -->
+      <div id="filtersandresults">
+        <!-- FILTER PORTION -->
+        <div id="filter">
+          <div id="filters"></div>
+          <div id="timefilters">
+            <div class="timefilter">
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS PORTION -->
+        <div id="resultsouterdiv">
+          <div class="resultportions">
+            <div id="chooseflighttype">
+              <span class="currentlyactive">Choose departing flight</span>
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span>Choose returning flight</span>
+              <span class="glyphicon glyphicon-chevron-right"></span>
+              <span>Review your trip</span>
+            </div>
+            <div class="panel panel-lg panel-default flexdatepanel">
+              <div id="">
+                <h4 class="flexibledateheading">Flexible dates</h4>
+                <p class="">Compare prices for nearby days</p>
               </div>
-              <div class="travelersbtns">
-                <button id="adultminus" class="minusbtn">-</button>
-                <p id="adultcount" class="passangercount">1</p>
-                <button id="adultplus" class="plusbtn">+</button>
+              <span
+                class="glyphicon glyphicon-chevron-down"
+                id="flexibledatearrow"
+              ></span>
+            </div>
+            <div id="horizontaldivforupperportion"><hr color="black" /></div>
+            <div id="disclouserandsorting">
+              <div id="disclouser">
+                Prices displayed include taxes and may change based on
+                availability. You can review any additional fees before
+                checkout. Prices are not final until you complete your purchase.
+              </div>
+              <div id="sortingdiv">
+                <select name="" id="selectsorting">
+                  <option value="pricelth">Price (Lowest)</option>
+                  <option value="pricehtl">Price (Highest)</option>
+                  <option value="durationlth">Duration (Shortest)</option>
+                  <option value="durationlth">Duration (Longest)</option>
+                  <option value="departearliest">Departure (Earliest)</option>
+                  <option value="departlatest">Departure (Latest)</option>
+                  <option value="arrivalearliest">Arrival (Latest)</option>
+                  <option value="arrivallatest">Arrival (Latest)</option>
+                </select>
               </div>
             </div>
-          </li>
-
-          <li>
-            <div class="travelersdiv">
-              <div class="travelerstext">
-                <p>Children</p>
-                <p>Age 2 through 17</p>
-              </div>
-              <div class="travelersbtns">
-                <button id="childrenminus" class="minusbtn">-</button>
-                <p id="childrencount" class="passangercount">1</p>
-                <button id="childrenplus" class="plusbtn">+</button>
-              </div>
+          </div>
+          <div class="resultportions">
+            <div class="panel panel-lg panel-default flightresult">
+              
             </div>
-          </li>
-
-          <li>
-            <div class="travelersdiv">
-              <div class="travelerstext">
-                <p>Infants</p>
-                <p>Younger than 2</p>
-              </div>
-              <div class="travelersbtns">
-                <button id="infantminus" class="minusbtn">-</button>
-                <p id="infantcount" class="passangercount">1</p>
-                <button id="infantplus" class="plusbtn">+</button>
-              </div>
-            </div>
-          </li>
-          <li><p class="text-info">Airline age rules</p></li>
-          <li class="travelpopupbtndiv">
-            <button class="btn btn-default travenpopupbtn">Cancel</button>
-            <button class="btn btn-default travenpopupbtn">Done</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="btn-group topbtn planeclass">
-        <select name="" class="planeclassid">
-          <option value="">Economy</option>
-          <option value="">Premium Economy</option>
-          <option value="">Buisness Class</option>
-          <option value="">First Class</option>
-        </select>
-      </div>
-
-      <div class="btn-group topbtn airlinedropdown">
-        <select name="" class="topbtn" id="airllinefilter">
-          <option value="">Any Airline</option>
-        </select>
-      </div>
-
-      <div class="btn-group topbtn dropdown moreoptiondiv">
-        <button
-          class="btn btn-default topbtn dropdown-toggle text-info"
-          type="button"
-          id="travellers"
-          data-toggle="dropdown"
-        >
-          More Options
-          <span class="glyphicon glyphicon-chevron-down"></span>
-        </button>
-
-        <ul class="dropdown-menu moredropdownoption">
-          <li>
-            <input type="checkbox" name="" id="" />
-            <p>Nonstop</p>
-          </li>
-          <li>
-            <input type="checkbox" name="" id="" />
-            <p>Refundable</p>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>

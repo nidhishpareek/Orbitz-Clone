@@ -8,3 +8,13 @@ airline_name by the top 100 results
 duration by arrival and departure
 
 plane_class
+
+data needed
+
+depatrure location / time
+destination / time
+flight duration & timing
+all airlines offering
+number of stops (name would be prefered)
+iata codes of destination and depatrure location.
+
