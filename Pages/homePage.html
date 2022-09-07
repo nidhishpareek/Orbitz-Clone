@@ -28,7 +28,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />     -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />    
     <link type="image/x-icon" href="https://www.orbitz.com/favicon.ico" sizes="16x16 32x32" rel="shortcut icon">
 
 
@@ -208,6 +208,14 @@
 
                     </div>
 
+                    <div  id="landingDiv">
+
+                    </div>
+
+                    <div>
+
+                    </div>
+
                     <div id="check">
                         <div>
                             <input type="checkBox" name="" id="" />
@@ -219,7 +227,7 @@
                         </div>
                     </div>
                     <div>
-                        <button class="searchButton">Search</button>
+                        <button class="searchButton" id="searchButton">Search</button>
                     </div>
                 </div>
             </div>
@@ -908,12 +916,12 @@
         });
 
         $('input[name="datefilter"]').on('apply.daterangepicker', function (ev, picker) {
-            $(this).val(picker.startDate.format('DD/MM/YYYY'));
-            $('input[name="enddatefilter').val(picker.endDate.format('DD/MM/YYYY'))
+            $(this).val(picker.startDate.format('MM/DD/YYYY'));
+            $('input[name="enddatefilter').val(picker.endDate.format('MM/DD/YYYY'))
             // document.getElementById("enddatefilter").value=picker.endDate.format('MM/DD/YYYY');
         });
         $('input[name="enddatefilter"]').on('apply.daterangepicker', function (ev, picker) {
-            $(this).val(picker.endDate.format('DD/MM/YYYY'));
+            $(this).val(picker.endDate.format('MM/DD/YYYY'));
             // document.getElementById("enddatefilter").value=picker.endDate.format('MM/DD/YYYY');
         });
 
