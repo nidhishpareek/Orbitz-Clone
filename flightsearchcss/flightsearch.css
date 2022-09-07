@@ -9,6 +9,8 @@
   color: rgb(15, 131, 146);
 }
 .travellersdropdown.travellersdropdown {
+  text-overflow: ;
+  flex-wrap: wrap;
   width: 265px;
   padding: 20px;
   border-radius: 10px;
@@ -37,7 +39,9 @@
   padding-inline: 200px;
   padding-block: 5px;
 }
-
+#bookingbugfix{
+  margin-top: -10px;
+}
 .minusbtn,
 .plusbtn {
   padding: 5px 10px 5px 10px;
@@ -136,8 +140,48 @@
 #selectsorting{
   padding-block: 10px;
 }
+#filtersection{
+  padding: 5px;
+}
+#filterby{
+  font-size: 18px;
+  font-weight: bold;
+}
+.timefilter{
+  justify-content: start;
+  margin: auto;
+}
+.timefilterheading{
+  font-weight: bold;
+  margin-block: 20px;
+}
+.btndaytime.btndaytime.btndaytime{
+  padding: 0px;
+  text-align: center;
+  margin-bottom: 5px;
+  border: 1px solid black;
+  width: 45%;
+}
+.daytimeimage{
+  width: 50px;
+  /* height: 50px; */
+}
+.daytimeimage >p{
+  margin: 0px;
+}
+.daysagment{
+  font-size: 10px;
+  margin: 0px;
+  font-weight: bold;
+}
+.timesagment{
+  font-size: 10px;
+}
 @media only screen and (max-width: 800px) {
   #topfilterbuttonoptions {
+    display: none;
+  }
+  #filtersection{
     display: none;
   }
 }

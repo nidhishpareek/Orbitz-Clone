@@ -1,4 +1,8 @@
 /////////STORING TRAVELLERS COUNT BY TOP RIBBON///////////
+// import  navbar from '../flightsearchscript/navbar.js';
+// document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
+
+
 
 var travellersobj = JSON.parse(localStorage.getItem("travellerslist")) || {
   adult: 1,

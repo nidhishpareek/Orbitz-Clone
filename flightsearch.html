@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="flightsearchcss/flightsearch.css" />
+    <!-- <link rel="stylesheet" href="flightsearchcss/navbar.css"> -->
     <link
       rel="stylesheet"
       href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
@@ -15,6 +16,7 @@
   </head>
 
   <body>
+    <div id="navbarcontainerforflightsearch"></div>
     <div class="container">
       <div id="topfilterbuttonoptions">
         <div class="btn-group btn topbtn dropdown triptypeclass">
@@ -43,7 +45,7 @@
           </button>
 
           <ul class="dropdown-menu travellersdropdown">
-            <li><p>We allow up to 6 travelers total per booking.</p></li>
+            <li><p>We allow up to 6 travelers total per </p><p id="boolingbugfix">booking.</p></li>
             <li>
               <div class="travelersdiv">
                 <div class="travelerstext">
@@ -137,11 +139,75 @@
       <!-- SEARCH AND FILTER PORTIONS STARTS HERE -->
       <div id="filtersandresults">
         <!-- FILTER PORTION -->
-        <div id="filter">
-          <div id="filters"></div>
+        <div id="filtersection">
+          <div id="filterby">Filter by</div>
+          <div id="filters">
+            
+          </div>
           <div id="timefilters">
-            <div class="timefilter">
-              
+            <div>
+              <div class="timefilterheading">Departure time</div>
+              <div class="timefilter">
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="timefilterheading">Arrival time</div>
+              <div class="timefilter">
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -188,13 +254,12 @@
             </div>
           </div>
           <div class="resultportions">
-            <div class="panel panel-lg panel-default flightresult">
-              
-            </div>
+            <div class="panel panel-lg panel-default flightresult"></div>
           </div>
         </div>
       </div>
     </div>
   </body>
 </html>
-<script src="flightsearchscript/flightsearch.js"></script>
+
+<script type="module" src="flightsearchscript/flightsearch.js"></script>
