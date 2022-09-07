@@ -58,4 +58,8 @@ document.getElementById("infantplus").addEventListener("click", () => {
   }
 });
 /////////////////////////////////////////////////////////////////////
-[]
+// REAL WORK OF THE FETCH STARTING
+var destinationobj = JSON.parse(localStorage.getItem("")) || {}
+var departingobj = JSON.parse(localStorage.getItem("")) || {}
+var date = JSON.parse(localStorage.getItem("")) || {}
+
