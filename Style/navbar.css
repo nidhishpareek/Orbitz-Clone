@@ -69,5 +69,12 @@ fill: #00a4bb;
                 min-inline-size: 1.125rem;
 
 }
+#signIn:hover{
+    background-color: #00253c!important;
+    background: none;
+        color: #00a4bb !important;
+        fill: #00a4bb;
+    
+}
 
  

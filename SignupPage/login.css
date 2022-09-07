@@ -3,6 +3,9 @@ span{
     color:blue;
     left: 2%;
 }
+body{
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
 /* .glyphicon-arrow-left{
     height: 10px;
     width: 30px;
@@ -12,40 +15,150 @@ span{
     text-align: center;
 }
 #logoi{
-    width: 15%;
+    width: 10%;
 }
 #navbar{
     display: flex;
     margin-top: 1%;
-    /* border: 0px 1px 2px 3px solid grey; */
+ 
 }
-.cbox{
+ form{
     display: flex;
-}
-#loginblock{
-    /* text-align: center; */
-    /* border: 1px solid teal; */
-    width: 30%;
+    justify-content: center;
+    width: 390px;
     margin: auto;
-    /* height: 60vw; */
-
+        /* padding-left: 1.5rem; */
+            /* padding-right: 1.5rem; */
+                max-inline-size: 28rem;
+    /* align-self: center; */
 }
-.cbox{
-    /* text-align: center; */
-    /* border: 1px solid red; */
-    width: max-content;
-
-    /* margin: auto; */
+h1{
+        font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 2rem;
 }
-input{
+
+.email,.password,.firstname,.lastname{
+    width: 94%;
+    padding: 10px;
+    height: 23px;
+    margin: 6px auto;
+        border:1px solid  #757575;
+            border-radius: 2px;
+             
+}
+hr{
+    border: 0;
+        border-top: 1px solid #e0e0e0;
+        clear: both;
+        display: block;
+        height: 1px;
+        margin: 10px;
+    
+        padding: 0;
+}
+#keep{
+    display: flex;
+        color: #616161;
+            line-height: 1.125rem;
+            align-items: center;
+}
+#keep>input{
+        border-color: #757575;
+            margin: 1px 0.563rem 0 0;
+            height: 1.125rem;
+                /* margin-right: -1.688rem; */
+                width: 1.125rem;
+                    box-sizing: content-box;
+                        /* opacity: 0; */
+                        /* position: relative; */
+                        z-index: 1;
+}
+#keep+p{
+        color: #616161;
+        font-size: 0.75rem;
+            line-height: 1rem;
+                font-synthesis: style;
+                    line-height: calc(16 / 12);
+}
+#keep+p+p{
+    color: #616161;
+        font-synthesis: style;
+        font-size: 14px;
+        width: 100%;
+        text-align: justify;
+         
+}
+a{
+        color: #007e8f;
+            text-decoration: none;
+                font-size: 0.875rem;
+}
+ 
+ button{
+    /* gap: 0.5rem; */
+
+    /* cursor: not-allowed; */
+    /* opacity: 0.36; */
+    /* pointer-events: none; */
+    
     width: 100%;
-    margin-bottom: 4%;
-    height: 45px;
+    margin-top: 0.5rem;
+
+    background-color: #C83259;
+    color: #FFFFFF;
+    border-radius: 2px;
+ 
+    font-size: 1rem;
+    line-height: 1.25rem;
+    min-block-size: 3rem;
+    padding: 0.25rem 1rem;
+  
+    -webkit-align-items: center;
+    align-items: center;
+    /* border-radius: 2500rem; */
+    border-style: solid;
+    border-width: 0;
+    cursor: pointer;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    font-weight: 500;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    text-shadow: none;
 }
-.cbox>input{
-    width: auto;
-    height: auto;
-}
-.signdiv{
+button+p{
     text-align: center;
+    color: #616161;
 }
+button+p+p{
+    text-align: center;
+    font-size: 14px;
+    color: #616161;
+}
+button+p+p+p{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #616161;
+}
+#logo{
+    display: flex;
+    justify-content: center;
+margin-top: 20px;
+
+}
+#logo>img{
+
+    width: 18px;
+    height: 18px;
+}
+#logo>img:nth-child(1){
+    margin-right: 20px;
+}
+
+
+ 
