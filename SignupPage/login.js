@@ -8,7 +8,9 @@ async function getToken(){
     var email=document.getElementById("email").value;
     var password=document.getElementById("password").value;
 
-
+   if (email == "" || firstName == "" || lastName == "" || password == "") {
+     alert("Please fill all details");
+   } else{
    
     var res = await fetch("http://localhost:3000/user");
    
@@ -29,6 +31,7 @@ async function getToken(){
     }else{
       alert("Wrong creadintial")
     }
+  }
 
 
 }
