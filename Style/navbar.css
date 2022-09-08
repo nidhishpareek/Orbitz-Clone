@@ -49,15 +49,18 @@ padding: 0.25rem 1rem;
 #last>div> p:hover{background: none;
 color: #00a4bb;
 fill: #00a4bb;
+cursor: pointer;
 }
 #option{
     display: flex;
     align-items: center;
     padding-inline-start: 1rem;
+    
 }
 #logo-nav>img{
         padding-inline-end: 1.5rem;
 }
+ 
 #option>img{
 
      
@@ -69,5 +72,14 @@ fill: #00a4bb;
                 min-inline-size: 1.125rem;
 
 }
+#signIn:hover{
+    background-color: #00253c!important;
+    background: none;
+        color: #00a4bb !important;
+        fill: #00a4bb;
+    
+}
+
+ 
 
  

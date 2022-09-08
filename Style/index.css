@@ -37,6 +37,9 @@ background-image: url("https://forever.travel-assets.com/flex/flexmanager/images
 h1{
      font-weight: bold !important;
 }
+#search-body hr{
+    margin: 0;
+}
  
 #hotel-option{
     display: flex;
@@ -46,13 +49,29 @@ h1{
 }
 #hotel-option>div{
     margin:0px 10px;
+    color: #007E8F;
+    padding: 0px 7px;
+    border:2px solid transparent;
 }
+#hotel-option>div:hover{
+    border-bottom: 2px solid #007E8F;
+    cursor: pointer;
+}
+#hotel-option>div:active{
+    color: #007E8F;
+}
+
 #hotel-option p{
-    color: #616161;
-        font-size: 14px;
-        font-weight: 550;
+ 
+        color: #616161;
+        font-size: 0.875rem;
+        font-weight: 700;
+            cursor: pointer;
         line-height: 1.125rem;
-    margin: 10px auto;
+       
+}
+#hotel-option p:hover{
+    color: #007E8F;
 }
 hr{
     margin: 0;
@@ -101,6 +120,12 @@ width: 20% !important;
         inline-size: 100%;
         line-height: 1.25rem;
         /* gap: 20px; */
+}
+#searchDiv>div:hover{
+    cursor: pointer;
+}
+#searchDiv input:hover{
+    cursor: pointer;
 }
 #para{
     color:white;
@@ -376,12 +401,20 @@ width: 100%;
 }
 #oneway div{
     display: flex;
+    /* padding: 5px 5px; */
     align-items: center;
+    text-align: center;
+    margin-top:10px ;
     /* justify-content: space-between; */
 }
 #oneway p{
     font-size: 14px;
-    margin:15px 5px;
+    /* margin: auto 10px; */
+    margin-left: 20px;
+    margin-right:20px ;
+    /* margin: 0; */
+   
+    /* margin:15px 5px; */
 }
 #oneway>div:nth-child(1){
         color: #616161;
@@ -389,8 +422,15 @@ width: 100%;
             font-weight: 500;
             line-height: 1.29;
 }
-#oneway>div:nth-child(1)>div{
-    margin-right: 30px;
+#oneway>div:nth-child(1)>div:nth-child(1){
+    /* margin:0px 5px; */
+    border-radius: 2px;
+    color: #002f35;
+
+    background-color: #b3d8dc;
+}
+#oneway>div:nth-child(1)>div:hover{
+background-color: #c8edf1;
 }
 #oneway>div:nth-child(2){
         background-color: transparent;
@@ -403,6 +443,8 @@ width: 100%;
     width: 33% !important;
   
   
+}a{
+    text-decoration: none;
 }
 
 .sec-box-flight {
@@ -417,7 +459,7 @@ width: 100%;
 .forth-box-flight {
     width: 15% !important;
 }
-.w3-dropdown-content{
+.indexPageSignIn{
     width: 375px;
     border-radius: 5px;
     /* margin: 20px; */
@@ -434,7 +476,7 @@ width: 100%;
     height: 40px;
     border-radius: 3px;
  }
- .w3-dropdown-content>div> p{
+ .indexPageSignIn>div> p{
         align-items: center;
             background-color: transparent;
             color: #1F1F1F;
@@ -451,7 +493,7 @@ width: 100%;
             -ms-user-select: none;
             user-select: none;
  }
- .w3-dropdown-content>p{
+ .indexPageSignIn>p{
     
             font-size: 1rem;
             font-weight: 600;
@@ -495,3 +537,8 @@ width: 100%;
 #leavingFrom:focus{
     outline: none;
 }
+
+@media screen and (max-width: 600px){
+
+}
+ 

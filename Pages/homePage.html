@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Orbitz Hotel Deals,Flight,Cheap Vaction and Rentel Cars</title>
-    <link rel="stylesheet" href="../Style/navbar.css" />
+    <link rel="stylesheet" href="../Style/commenenavbar.css" />
     <link rel="stylesheet" href="../Style/index.css" />
     <link rel="stylesheet" href="../Style/homePage.css">
     <script defer src="../Scripts/homePage.js" type="module"></script>
-    
+
     <script src="https://mui.com/x/react-date-pickers/date-range-picker/#BasicDateRangePicker.js"></script>
 
 
@@ -28,7 +28,7 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" />
     <link type="image/x-icon" href="https://www.orbitz.com/favicon.ico" sizes="16x16 32x32" rel="shortcut icon">
 
 
@@ -43,14 +43,22 @@
                         <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="">
                     </a>
                 </div>
+
+
                 <div id="option">
-                    <p>
-                        More travel
-                    </p>
-                    <span class="material-symbols-outlined">
-                        arrow_drop_down
-                    </span>
+                    <div>
+                        <p>
+                            More travel
+                        </p>
+                        <span class="material-symbols-outlined">
+                            arrow_drop_down
+                        </span>
+                    </div>
+                   
+
                 </div>
+
+
             </div>
             <div id="last">
                 <div>
@@ -66,17 +74,22 @@
                     <a href="">Trips</a>
                 </div>
                 <div class="w3-dropdown-click w3-right">
-                    <button class="w3-button w3-transferent" id="signIn">User name </button>
-                    <div id="Demo" class="w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom" style="right:0">
-
-                        <h4 class="insideSignin">Members can access discounts, points and special features</h4>
-                        <button class="searchButton button-signIn"><a href=""></a></button>
-                        <p>Creat new account</p>
+                    <button class="w3-button w3-transferent" id="signIn"></button>
+                    <div id="Demo" class="indexPageSignIn w3-dropdown-content w3-bar-block w3-card-4 w3-animate-zoom"
+                        style="right:0">
+                        <div id="account">
+                            <h2 class="homePage">Hi, <span id="userName"></span></h2>
+                            <p><span id="emailOfuser"></span></p>
+                            <button>Silver Member</button>
+                            <p class="bucks">$0.00</p>
+                            <p>Orbucks</p>
+                        </div>
                         <div>
-                            <p>List your property</p>
-                            <p>Loyality program</p>
-                            <hr>
+                            <p style="color: #007E8F;">Account</p>
+                            <p style="color: #007E8F;">List of favorites</p>
                             <p>Feedback</p>
+                            <hr>
+                            <p style="color: #007E8F;" id="signOut">Sign out</p>
                         </div>
 
                     </div>
@@ -204,11 +217,11 @@
 
                     </div>
                     <div id="serachItem">
-            
+
 
                     </div>
 
-                    <div  id="landingDiv">
+                    <div id="landingDiv">
 
                     </div>
 
@@ -817,78 +830,21 @@
 
         </div>
         <div id="app">
-            <img src="https://lh3.googleusercontent.com/KEIg_i1m5QCqKj60yRLckeHvBjJQNUJdN0aJbAgnDsPSnfNAO9xM1ZhxlX0MC3IW6qxkcKnQ-Tc5B3_EJE5CcMn4UfhcSavu675RC-prbafTKwyzMrirL6x6ZUD92z1DExV9FbJYwxh3D9ZGxcnaw7PDsxcWpdoPxCRUoMsl_KgzRMzz3MsACDUWyvQBF37N_Skex7zcPAMIG68VLNq-tGS6FwYRFwKeEbHluPvEvwCVdoONQZKYiav9adpTRovMoFVl9x3rH0zknpOs0saTzMf3atV8E69wLqLtwVrx393NlK8GL5tPvw73xHBrUh-mvuhRloSW6WfFrbDAUO_HDe1OZHPhO45vQKnnAWrD_o0yYkzA7qrTxhoTx2l7jPlr0aWbYBJpPqTZsSzeTA3gGPLowg7wo5n06RWPSu4M5loN8__O7gxGszlPJzJ3ZEj1nHhpMcf5-VkLSoDVoFGnA-82klIxrUX9u3x4Q5q5Ln8-icOeFUdXnz3Vick46Gpa4lauVp2Okl984ENQjEBTqal2BHqU87hIinRpUYqn57d_tTDyDnE7ldHfcxu-AtIGDQ2eukIFeEh2FtT79MtGeQfB9Lk1QvUZkWFfALRNrvcVA1DPDP5THpWXuHnW5kfyFgyfQbpydiA6ZvK5Ip-P-MblsdZNHWi1k7J_sQZQFMG-ukLSFIoh5T1IZwTvWp7QGytOCxzbs8oI1H_b3dmplVzcWi1lPKsMrehSYPVo2reKvMxVnz1bJfS9r_u4=w1501-h433-no?authuser=0" alt="">
+            <img src="https://lh3.googleusercontent.com/KEIg_i1m5QCqKj60yRLckeHvBjJQNUJdN0aJbAgnDsPSnfNAO9xM1ZhxlX0MC3IW6qxkcKnQ-Tc5B3_EJE5CcMn4UfhcSavu675RC-prbafTKwyzMrirL6x6ZUD92z1DExV9FbJYwxh3D9ZGxcnaw7PDsxcWpdoPxCRUoMsl_KgzRMzz3MsACDUWyvQBF37N_Skex7zcPAMIG68VLNq-tGS6FwYRFwKeEbHluPvEvwCVdoONQZKYiav9adpTRovMoFVl9x3rH0zknpOs0saTzMf3atV8E69wLqLtwVrx393NlK8GL5tPvw73xHBrUh-mvuhRloSW6WfFrbDAUO_HDe1OZHPhO45vQKnnAWrD_o0yYkzA7qrTxhoTx2l7jPlr0aWbYBJpPqTZsSzeTA3gGPLowg7wo5n06RWPSu4M5loN8__O7gxGszlPJzJ3ZEj1nHhpMcf5-VkLSoDVoFGnA-82klIxrUX9u3x4Q5q5Ln8-icOeFUdXnz3Vick46Gpa4lauVp2Okl984ENQjEBTqal2BHqU87hIinRpUYqn57d_tTDyDnE7ldHfcxu-AtIGDQ2eukIFeEh2FtT79MtGeQfB9Lk1QvUZkWFfALRNrvcVA1DPDP5THpWXuHnW5kfyFgyfQbpydiA6ZvK5Ip-P-MblsdZNHWi1k7J_sQZQFMG-ukLSFIoh5T1IZwTvWp7QGytOCxzbs8oI1H_b3dmplVzcWi1lPKsMrehSYPVo2reKvMxVnz1bJfS9r_u4=w1501-h433-no?authuser=0"
+                alt="">
 
         </div>
         <div id="moreDesti">
             <h1>More destinations</h1>
             <img src="https://i.postimg.cc/3xN9Cf4r/Screenshot-2022-09-06-023553.png" alt="">
-           
-        </div>
-        
-       
-    </div>
-    <footer>
-        <div><img
-                src="https://a.travel-assets.com/globalcontrols-service/content/f285fb631b0a976202ef57611c7050e9ef5ca51a/images/EG_Wordmark_blue_RGB.svg"
-                alt=""></div>
-        <div>
-            <p>Company</p>
-            <ul>
-                <li>About</li>
-                <li>Jobs</li>
-                <li>List your property</li>
-                <li>Partnerships</li>
-                <li>Newsroom</li>
-                <li>Investor</li>
-                <li>Site map</li>
-                <li>Prbirz</li>
-                <li>Advertising</li>
 
-            </ul>
         </div>
-        <div>
-            <p>Explore</p>
-            <ul>
-                <li>Hotels in United States</li>
-                <li>Vacation Rentals in United States</li>
-                <li>Car Rentals in United States</li>
-                <li>Domestic Flight</li>
-                <li>Vaction Packages in United States</li>
-                <li>Orbitz Reviews</li>
-                <li>Orbitz Coupons</li>
-                <li>LGBTQ Travel</li>
-                <li>Unique Accommodation</li>
-                <li>Travel Blog</li>
-            </ul>
-        </div>
-        <div>
-            <p>Policies</p>
-            <ul>
-                <li>Privacy Policy</li>
-                <li>Terms of Use</li>
-                <li>Vrbo term and conditions</li>
-                <li>Orbitz Rewards Terms</li>
-                <li>Do not sell my personal inforamations</li>
-            </ul>
-        </div>
-        <div>
-            <p>Help</p>
-            <ul>
-                <li>Support</li>
-                <li>Cancle ypur hotel or vaction rental booking</li>
-                <li>Cancle your flight</li>
-                <li>Refund timelines ,policies & processes</li>
-                <li>Use ad=nd Coupon</li>
-            </ul>
-        </div>
-    </footer>
-    <hr>
-    <div id="copyRight">
-        <p>© 2022 Orbitz, LLC, an Expedia Group Company. All rights reserved.</p>
-        <p>Orbitz, Orbitz.com, and the Orbitz logo are trademarks or registered trademarks of Orbitz, LLC. CST#
-            2083930-50.
-        </p>
+
+
+    </div>
+
+    <div id="footer">
+
     </div>
 
 
