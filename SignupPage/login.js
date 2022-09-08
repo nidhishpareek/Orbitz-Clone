@@ -8,7 +8,7 @@ async function getToken(){
     var email=document.getElementById("email").value;
     var password=document.getElementById("password").value;
 
-   if (email == "" || firstName == "" || lastName == "" || password == "") {
+   if (email == "" ||  password == "") {
      alert("Please fill all details");
    } else{
    
