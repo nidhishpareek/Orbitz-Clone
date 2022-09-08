@@ -1,0 +1,21 @@
+{
+  "name": "orbitz-clone",
+  "version": "1.0.0",
+  "description": "Its the clone of orbitz.com, we will update the descirption after the project.\r A team of 5 members.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nidhishpareek/Orbitz-Clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nidhishpareek/Orbitz-Clone/issues"
+  },
+  "homepage": "https://github.com/nidhishpareek/Orbitz-Clone#readme"
+}

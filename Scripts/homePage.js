@@ -5,6 +5,7 @@ import { footer } from "../component/footer.js";
 document.querySelector("body").addEventListener("click", function () {
   document.getElementById("serachItem").style.display = "none";
   document.getElementById("landingDiv").style.display = "none";
+ 
 });
 async function searchData() {
   var search = document.getElementById("leavingFrom").value;
@@ -81,7 +82,7 @@ async function searchDataLanding() {
   }
 }
 
-var printIt2 = debounch(searchDataLanding, 1000);
+var printIt2 = debounch2(searchDataLanding, 1000);
 // console.log(printIt());
 function debounch2(fn, delay) {
   let timeid;
@@ -161,3 +162,18 @@ document.getElementById("searchButton").addEventListener("click", function () {
   };
   localStorage.setItem("dates", JSON.stringify(objDate));
 });
+
+
+document.getElementById("signOut").addEventListener("click",function(){
+  localStorage.clear();
+  location.href="../Pages/index.html"
+});
+ 
+ 
+
+var obj=JSON.parse(localStorage.getItem("userDetails"))||{}
+
+document.getElementById("signIn").innerText=obj.firstName;
+document.getElementById("userName").innerText = obj.firstName;
+document.getElementById("emailOfuser").innerText = obj.email;
+

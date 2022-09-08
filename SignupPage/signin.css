@@ -45,7 +45,7 @@ h1 {
 }
 
 .email,
-.password,
+ 
 .firstname,
 .lastname {
     width: 94%;
@@ -179,4 +179,27 @@ hr {
 
 #logo>img:nth-child(1) {
     margin-right: 20px;
+}
+ 
+#passwordVisi{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 94%;
+        padding: 10px;
+        height: 23px;
+        margin: 10px auto;
+        border: 1px solid #757575;
+        border-radius: 2px;
+}
+.password{
+    width: 100%;
+    border: none;
+    outline: 0;
+}
+.material-symbols-outlined{
+color: #616161;
+}
+.material-symbols-outlined:hover{
+    cursor: pointer;
 }

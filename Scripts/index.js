@@ -36,7 +36,7 @@ import { footer } from "../component/footer.js";
 // BasicDateRangePicker;
  
  document.getElementById("footer").innerHTML=footer();
-
+ 
 const changeDiv=()=>{
     document.getElementById("search").style.display="none"
       
