@@ -10,6 +10,7 @@ document.querySelector("body").addEventListener("click", function () {
   document.getElementById("landingDiv").style.display = "none";
  
 });
+ 
 async function searchData() {
   var search = document.getElementById("leavingFrom").value;
   if (search == "") {

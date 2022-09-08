@@ -3,7 +3,7 @@ ul{
     padding: 0;
 }
 footer{
-    display: flex;
+    display: flex !important;
     width: 90%;
      align-content: flex-start;
     margin:50px auto;

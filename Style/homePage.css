@@ -4,7 +4,7 @@
     display: none;
      
     left: 3%;
-    top: 118px;
+    top: 136px;
    
     width: 31.1%;
     background-color:white;
@@ -48,7 +48,7 @@ border: 1px solid #999999;
             display: none;
         
             left:  35.3%;
-            top: 118px;
+            top: 136px;
            
             width: 31.1%;
             background-color: white;
@@ -109,4 +109,62 @@ border: 1px solid #999999;
 .bucks{
     font-size: 18px !important;
     font-weight: 700 !important;
+}
+.dropdown-menu{
+
+    width: 320px;
+    
+}#bg-light {
+    background-color:transparent !important;
+}
+.nav-item{
+    margin-top: 0px !important;
+
+}
+@media (min-width: 768px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
 }

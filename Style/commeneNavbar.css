@@ -29,6 +29,9 @@
      /* align-items: center; */
 
  }
+  #navbar p{
+    margin-bottom: auto;
+  }
 
  #navbar-div {
      display: flex;
