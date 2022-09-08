@@ -1,6 +1,6 @@
 body{
     margin: 0px;
-    background-color: #f4f5f4;
+    background-color: #f4f5f4 !important;
 }
 #backGround{
 background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/08/13/ORB_SummerSale_imgB_1920x1440_20210813.jpg");
@@ -193,8 +193,8 @@ flex-direction: column;
 }
  
 #para>h2{
-    display: block;
-    margin: 0px auto;
+    display: block !important;
+    margin: 30px auto 10px auto !important;
         /* font-size: 1.17em; */
         
         font-weight: bold;
@@ -410,10 +410,10 @@ width: 100%;
 #oneway p{
     font-size: 14px;
     /* margin: auto 10px; */
-    margin-left: 20px;
-    margin-right:20px ;
+    /* margin-left: 20px;
+    margin-right:20px ; */
     /* margin: 0; */
-   
+    margin: 15px 20px;
     /* margin:15px 5px; */
 }
 #oneway>div:nth-child(1){

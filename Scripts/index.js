@@ -1,5 +1,7 @@
 // import { navbar } from "../component/navbar.js";
-
+// if (localStorage.getItem("mail")) {
+//   location.href = "../SignupPage/login.html";
+// }
 import { footer } from "../component/footer.js";
 
 // import BasicDateRangePicker from "../component/datePicker.js";
