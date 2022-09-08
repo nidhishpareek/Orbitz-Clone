@@ -1,6 +1,9 @@
 import { footer } from "../component/footer.js";
+import { navbarHome } from "../component/homePageNavbar.js";
 
  document.getElementById("footer").innerHTML = footer();
+
+ document.getElementById("navbar").innerHTML= navbarHome();
 
 document.querySelector("body").addEventListener("click", function () {
   document.getElementById("serachItem").style.display = "none";
