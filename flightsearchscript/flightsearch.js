@@ -81,9 +81,9 @@ var data_airlabs = new URLSearchParams({
 console.log(data_airlabs);
 var apiairlabs = `https://airlabs.co/api/v9/schedules?${data_airlabs}`;
 //////////////////////searchline here
-var sortselect = document.getElementById('selectsorting').value;
+var sortselect = document.getElementById("selectsorting").value;
 
-console.log(sortselect)
+console.log(sortselect);
 searchflights();
 async function searchflights() {
   try {
@@ -95,21 +95,23 @@ async function searchflights() {
     console.log("falil", err);
   }
 }
-function sortingfunction(data){
-  document.getElementById('selectsorting').addEventListener("change",()=>sortingfunction(data));
-  var sortselect = document.getElementById('selectsorting').value;
+function sortingfunction(data) {
+  document
+    .getElementById("selectsorting")
+    .addEventListener("change", () => sortingfunction(data));
+  var sortselect = document.getElementById("selectsorting").value;
 
   if (sortselect == "pricelth") {
     data.sort((a, b) => {
       return a.flight_number - b.flight_number;
     });
   }
-  if(sortselect == 'pricehtl'){
+  if (sortselect == "pricehtl") {
     data.sort((a, b) => {
       return b.flight_number - a.flight_number;
     });
   }
-  displayresults(data)
+  displayresults(data);
 }
 function displayresults(data) {
   document.getElementById("flightresults").innerHTML = "";
@@ -170,7 +172,7 @@ function displayresults(data) {
     </div>
   </button>`;
     div.addEventListener("click", () => {
-      showflight(ele, flighthours, flightmins, dept, arr);
+      showflight(ele, flighthours, flightmins, dept, arr, price);
     });
     document.getElementById("flightresults").append(div);
   });
@@ -184,18 +186,19 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
     "flightdetailsetc"
   ).innerText = `${ele.airline_iata}, ${dateobj.startDate}`;
   document.getElementById(
-    "timedurationdiv"
+    "timingincard"
   ).innerHTML = `<p class="deparrtime">${dept.getHours()}:${dept.getMinutes()}-${arr.getHours()}:${arr.getMinutes()}</p>
   <p>${flighthours}Hr ${flightmins} Minutes</p>`;
   document.getElementById(
     "selectedfaircity"
   ).innerText = `Selected Fair to ${destinationobj.cityName}`;
   document.getElementById("price").innerText = `$ ${
-    price * (travellersobj.adult + travellersobj.child + travellersobj.infant)
+    ele.flight_number *
+    (travellersobj.adult + travellersobj.child + travellersobj.infant)
   }`;
   document.getElementById(
     "pricefortravellers"
-  ).innerText = `${price} roundtrip for 1 traveler`;
+  ).innerText = `${ele.flight_number} roundtrip for 1 traveler`;
   localStorage.setItem("selecteddepartingelement", JSON.stringify(ele));
-  localStorage.setItem("departprice", price);
+  localStorage.setItem("departprice", ele.flight_number);
 }
