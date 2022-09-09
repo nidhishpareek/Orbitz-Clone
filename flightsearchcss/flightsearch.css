@@ -286,7 +286,17 @@
   background-color: rgb(200,50,89);
   border: none;
 }
-
+#headingoffilter{
+  font-size: 20px;
+  font-weight: bold;
+}
+.airlinediv{
+  display: flex;
+  align-items: baseline;
+}
+.airlinename{
+  margin-left: 10px;
+}
 @media only screen and (max-width: 800px) {
   #topfilterbuttonoptions {
     display: none;

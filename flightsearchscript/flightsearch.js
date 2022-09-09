@@ -1,7 +1,7 @@
 /////////STORING TRAVELLERS COUNT BY TOP RIBBON///////////
 // import  navbar from '../flightsearchscript/navbar.js';
 // document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
-
+var listofairlines = new Set();
 var travellersobj = JSON.parse(localStorage.getItem("travellerslist")) || {
   adult: 1,
   child: 0,
@@ -81,7 +81,7 @@ var data_airlabs = new URLSearchParams({
 console.log(data_airlabs);
 var apiairlabs = `https://airlabs.co/api/v9/schedules?${data_airlabs}`;
 //////////////////////////////searchline here
-// searchflights();
+searchflights();
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////
@@ -106,34 +106,30 @@ function sortingfunction(data) {
     data.sort((a, b) => {
       return a.flight_number - b.flight_number;
     });
-  }
-  else if (sortselect == "pricehtl") {
+  } else if (sortselect == "pricehtl") {
     data.sort((a, b) => {
       return b.flight_number - a.flight_number;
     });
-  }
-  else if (sortselect == "departlatest") {
+  } else if (sortselect == "departlatest") {
     data.sort((a, b) => {
       return b.dep_time_ts - a.dep_time_ts;
     });
-  }
-  else if (sortselect == "departearliest") {
+  } else if (sortselect == "departearliest") {
     data.sort((a, b) => {
       return a.dep_time_ts - b.dep_time_ts;
     });
-  }
-  else if (sortselect == "durationlth") {
+  } else if (sortselect == "durationlth") {
     data.sort((a, b) => {
       return a.duration - b.duration;
     });
-  }
-  else if (sortselect == "durationhtl") {
+  } else if (sortselect == "durationhtl") {
     data.sort((a, b) => {
       return b.duration - a.duration;
     });
   }
   displayresults(data);
 }
+
 function displayresults(data) {
   document.getElementById("flightresults").innerHTML = "";
   data.map((ele) => {
@@ -192,12 +188,34 @@ function displayresults(data) {
       </div>
     </div>
   </button>`;
+    listofairlines.add(ele.airline_iata);
     div.addEventListener("click", () => {
       showflight(ele, flighthours, flightmins, dept, arr, price);
     });
     document.getElementById("flightresults").append(div);
   });
+  console.log('list is',listofairlines);
+  // displayairlines(listofairlines);
 }
+
+// function displayairlines(listofairlines) {
+//   document.getElementById("airlines").innerHTML = "";
+//   listofairlines.map((ele) => {
+//     let div = document.createElement("div");
+//     // let checkbox = document.createElement("input");
+//     // let pr = document.createElement("p");
+//     // checkbox.setAttribute("type", "checkbox");
+//     // pr.innerText = ele;
+//     // pr.setAttribute("class","airlinename")
+//     // div.setAttribute("class", "airlinediv")
+//     // div.append(checkbox, pr);
+//     div.innerHTML= `              <div class="airlinediv">
+//     <input type="checkbox">
+//     <p class="airlinename">${airline_iata}</p>
+//   </div>`
+//     document.getElementById("airlines").append(div)
+//   });
+// }
 
 function showflight(ele, flighthours, flightmins, dept, arr) {
   document.getElementById(
@@ -223,7 +241,6 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
   localStorage.setItem("selecteddepartingelement", JSON.stringify(ele));
   localStorage.setItem("departprice", ele.flight_number);
 }
-
 
 function redirect() {
   window.location.href = "returnflight.html";
