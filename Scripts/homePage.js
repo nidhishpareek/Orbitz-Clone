@@ -165,6 +165,8 @@ document.getElementById("searchButton").addEventListener("click", function () {
     endDate,
   };
   localStorage.setItem("dates", JSON.stringify(objDate));
+  console.log("kashi")
+  location.href="../pages/flightsearch.html"
 });
 
 

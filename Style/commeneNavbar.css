@@ -105,4 +105,187 @@
      fill: #00a4bb;
 
  }
- 
+ .homePage {
+     font-size: 1.125rem !important;
+     font-weight: 700 !important;
+     line-height: 1.375rem !important;
+ }
+
+ #account {
+     text-align: center;
+ }
+
+ .indexPageSignIn>div>p {
+     display: block;
+     margin: 0;
+ }
+
+ #account>button {
+     background-color: #757575;
+     border: none;
+     border-radius: 5px;
+     color: white;
+     font-weight: 600;
+ }
+
+ .bucks {
+     font-size: 18px !important;
+     font-weight: 700 !important;
+ }
+
+ .dropdown-menu {
+
+     width: 320px;
+
+ }
+
+ #bg-light {
+     background-color: transparent !important;
+ }
+
+ .nav-item {
+     margin-top: 0px !important;
+
+ }
+
+ @media (min-width: 768px) {
+     .animate {
+         animation-duration: 0.3s;
+         -webkit-animation-duration: 0.3s;
+         animation-fill-mode: both;
+         -webkit-animation-fill-mode: both;
+     }
+ }
+
+ @keyframes slideIn {
+     0% {
+         transform: translateY(1rem);
+         opacity: 0;
+     }
+
+     100% {
+         transform: translateY(0rem);
+         opacity: 1;
+     }
+
+     0% {
+         transform: translateY(1rem);
+         opacity: 0;
+     }
+ }
+
+ @-webkit-keyframes slideIn {
+     0% {
+         -webkit-transform: transform;
+         -webkit-opacity: 0;
+     }
+
+     100% {
+         -webkit-transform: translateY(0);
+         -webkit-opacity: 1;
+     }
+
+     0% {
+         -webkit-transform: translateY(1rem);
+         -webkit-opacity: 0;
+     }
+ }
+
+ .slideIn {
+     -webkit-animation-name: slideIn;
+     animation-name: slideIn;
+ }
+ .indexPageSignIn {
+     width: 375px;
+     border-radius: 5px;
+     /* margin: 20px; */
+     padding: 20px !important;
+
+
+ }
+
+ .insideSignin {
+     font-weight: bold;
+     text-align: center;
+ }
+
+ .button-signIn {
+     width: 100%;
+     height: 40px;
+     border-radius: 3px;
+ }
+
+ .indexPageSignIn>div>p {
+     align-items: center;
+     background-color: transparent;
+     color: #1F1F1F;
+     display: flex;
+     font-size: 0.875rem;
+     font-weight: 400;
+     inline-size: 100%;
+     justify-content: flex-start;
+     line-height: 1.125rem;
+     padding: 0.75rem 1.5rem;
+     text-decoration: none;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+ }
+
+ .indexPageSignIn>p {
+
+     font-size: 1rem;
+     font-weight: 600;
+     height: 2.25rem;
+     /* margin-left: 0; */
+
+     background-color: rgba(255, 255, 255, 0);
+     color: #007E8F;
+     border-radius: 2px;
+     inline-size: 100%;
+     text-align: center;
+
+ }
+ .homePage {
+     font-size: 1.125rem !important;
+     font-weight: 700 !important;
+     line-height: 1.375rem !important;
+ }
+
+ #account {
+     text-align: center;
+ }
+
+ .indexPageSignIn>div>p {
+     display: block;
+     margin: 0;
+ }
+
+ #account>button {
+     background-color: #757575;
+     border: none;
+     border-radius: 5px;
+     color: white;
+     font-weight: 600;
+ }
+
+ .bucks {
+     font-size: 18px !important;
+     font-weight: 700 !important;
+ }
+
+ .dropdown-menu {
+
+     width: 320px;
+
+ }
+
+ #bg-light {
+     background-color: transparent !important;
+ }
+
+ .nav-item {
+     margin-top: 0px !important;
+
+ }
