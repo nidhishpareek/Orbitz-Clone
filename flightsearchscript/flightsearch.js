@@ -245,3 +245,17 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 function redirect() {
   window.location.href = "returnflight.html";
 }
+
+document.getElementById("signIn").addEventListener("click", myFunction);
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}var object = JSON.parse(localStorage.getItem("userDetails")) || {};
+
+document.getElementById("signIn").innerText = object.firstName;
+document.getElementById("userName").innerText = object.firstName;
+document.getElementById("emailOfuser").innerText = object.email;
