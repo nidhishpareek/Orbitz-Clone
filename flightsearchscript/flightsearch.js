@@ -84,7 +84,7 @@ var apiairlabs = `https://airlabs.co/api/v9/schedules?${data_airlabs}`;
 var sortselect = document.getElementById("selectsorting").value;
 
 console.log(sortselect);
-searchflights();
+// searchflights();
 async function searchflights() {
   try {
     var res = await fetch(apiairlabs);
@@ -202,3 +202,9 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
   localStorage.setItem("selecteddepartingelement", JSON.stringify(ele));
   localStorage.setItem("departprice", ele.flight_number);
 }
+
+
+function redirect() {
+  window.location.href = "returnflight.html";
+}
+// document.getElementById("submitbutton").addEventListener("click", redirect)
