@@ -57,8 +57,8 @@ document.getElementById("infantplus").addEventListener("click", () => {
 });
 /////////////////////////////////////////////////////////////////////
 // REAL WORK OF THE FETCH STARTING
-var destinationobj = JSON.parse(localStorage.getItem("landing"));
-var departingobj = JSON.parse(localStorage.getItem("depature"));
+var destinationobj = JSON.parse(localStorage.getItem("depature")); 
+var departingobj = JSON.parse(localStorage.getItem("landing"));
 var dateobj = JSON.parse(localStorage.getItem("dates"));
 
 let startdate = dateobj.startDate;
@@ -243,5 +243,5 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 }
 
 function redirect() {
-  window.location.href = "returnflight.html";
+  window.location.href = "checkout.html";
 }
