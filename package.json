@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/nidhishpareek/Orbitz-Clone/issues"
   },
-  "homepage": "https://github.com/nidhishpareek/Orbitz-Clone#readme"
+  "homepage": "https://github.com/nidhishpareek/Orbitz-Clone#readme",
+  "dependencies": {
+    "bootstrap-icons": "^1.9.1"
+  }
 }

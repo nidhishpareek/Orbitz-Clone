@@ -43,3 +43,13 @@ hr{
         margin:5px auto;
             font-size: 0.75rem;
 }
+@media only screen and (max-width:800px) {
+    #footerforresponsiveness{
+        flex-direction: column;
+        margin-top: 30px;
+        
+    }
+    #footerforresponsiveness *, #copyRight{
+        margin-left: 10px;
+    }
+}
