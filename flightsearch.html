@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      type="image/x-icon"
+      href="https://www.orbitz.com/favicon.ico"
+      sizes="16x16 32x32"
+      rel="shortcut icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="flightsearchcss/flightsearch.css" />
+    <!-- <link rel="stylesheet" href="flightsearchcss/navbar.css"> -->
+    <!-- <link
+      rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <title>Flight Search</title>
+  </head>
+
+  <body class="bodyclassmy">
+    <div id="navbarcontainerforflightsearch"></div>
+    <div class="container">
+      <div id="topfilterbuttonoptions">
+        <div class="btn-group btn topbtn dropdown triptypeclass">
+          <select class="form-select" name="" id="triptype">
+            <option value="">
+              One Way <span class="glyphicon glyphicon-chevron-down"></span>
+            </option>
+            <option value="">
+              Roundtrip<span class="glyphicon glyphicon-chevron-down"></span>
+            </option>
+            <option value="">
+              Multi-city <span class="glyphicon glyphicon-chevron-down"></span>
+            </option>
+          </select>
+        </div>
+
+        <div class="btn-group btn topbtn dropdown travellersdropdowndiv">
+          <button
+            class="btn btn-default dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            id="travellers"
+            aria-expanded="false"
+          >
+            Traveler
+          </button>
+
+          <ul class="dropdown-menu travellersdropdown">
+            <li>
+              <p>We allow up to 6 travelers total per booking.</p>
+            </li>
+            <li>
+              <div class="travelersdiv">
+                <div class="travelerstext">
+                  <p>Adults</p>
+                  <p>18 and older</p>
+                </div>
+                <div class="travelersbtns">
+                  <button id="adultminus" class="minusbtn">-</button>
+                  <p id="adultcount" class="passangercount">1</p>
+                  <button id="adultplus" class="plusbtn">+</button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="travelersdiv">
+                <div class="travelerstext">
+                  <p>Children</p>
+                  <p>Age 2 through 17</p>
+                </div>
+                <div class="travelersbtns">
+                  <button id="childrenminus" class="minusbtn">-</button>
+                  <p id="childrencount" class="passangercount">1</p>
+                  <button id="childrenplus" class="plusbtn">+</button>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="travelersdiv">
+                <div class="travelerstext">
+                  <p>Infants</p>
+                  <p>Younger than 2</p>
+                </div>
+                <div class="travelersbtns">
+                  <button id="infantminus" class="minusbtn">-</button>
+                  <p id="infantcount" class="passangercount">1</p>
+                  <button id="infantplus" class="plusbtn">+</button>
+                </div>
+              </div>
+            </li>
+            <li><p class="topbtn">Airline age rules</p></li>
+            <li class="travelpopupbtndiv">
+              <button class="btn btn-default travenpopupbtn">Cancel</button>
+              <button class="btn btn-default travenpopupbtn">Done</button>
+            </li>
+          </ul>
+        </div>
+
+        <div class="btn-group btn topbtn planeclass">
+          <select name="" class="planeclassid">
+            <option value="">Economy</option>
+            <option value="">Premium Economy</option>
+            <option value="">Buisness Class</option>
+            <option value="">First Class</option>
+          </select>
+        </div>
+
+        <div class="btn-group btn topbtn airlinedropdown">
+          <select name="" class="topbtn" id="airllinefilter">
+            <option value="">Any Airline</option>
+          </select>
+        </div>
+
+        <div class="btn-group btn topbtn dropdown moreoptiondiv">
+          <button
+            class="btn btn-default topbtn dropdown-toggle"
+            type="button"
+            id="travellers"
+            data-toggle="dropdown"
+          >
+            More Options
+            <span class="glyphicon glyphicon-chevron-down"></span>
+          </button>
+
+          <ul class="dropdown-menu moredropdownoption">
+            <li>
+              <input type="checkbox" name="" id="" />
+              <p>Nonstop</p>
+            </li>
+            <li>
+              <input type="checkbox" name="" id="" />
+              <p>Refundable</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="searchbardiv"></div>
+
+      <!-- SEARCH AND FILTER PORTIONS STARTS HERE -->
+      <div id="filtersandresults">
+        <!-- FILTER PORTION -->
+        <div id="filtersection">
+          <div id="filterby">Filter by</div>
+          <div id="filters"></div>
+          <div id="timefilters">
+            <div>
+              <div class="timefilterheading">Departure time</div>
+              <div class="timefilter">
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="timefilterheading">Arrival time</div>
+              <div class="timefilter">
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+                <div class="btn btn-default btn-sm btndaytime">
+                  <img
+                    class="daytimeimage"
+                    src="https://static.vecteezy.com/system/resources/previews/005/029/317/original/sun-flat-icon-single-high-quality-outline-symbol-of-spring-for-web-design-or-mobile-app-thin-line-signs-of-sun-for-design-logo-visit-card-etc-outline-pictogram-of-sun-free-vector.jpg"
+                    alt="morning"
+                  />
+                  <p class="daysagment">Morning</p>
+                  <p class="timesagment">(5:00 AM - 11:59AM)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTS PORTION -->
+        <div id="resultsouterdiv">
+          <div class="resultportions">
+            <div id="chooseflighttype">
+              <span class="currentlyactive">Choose departing flight</span>
+              <span class="glyphicon glyphicon-chevron-right">></span>
+              <span>Choose returning flight</span>
+              <span class="glyphicon glyphicon-chevron-right">></span>
+              <span>Review your trip</span>
+            </div>
+            <div class="panel panel-lg panel-default flexdatepanel">
+              <div id="">
+                <h4 class="flexibledateheading">Flexible dates</h4>
+                <p class="">Compare prices for nearby days</p>
+              </div>
+              <span
+                class="glyphicon glyphicon-chevron-down"
+                id="flexibledatearrow"
+              ></span>
+            </div>
+            <div id="horizontaldivforupperportion"><hr color="black" /></div>
+            <div id="disclouserandsorting">
+              <div id="disclouser">
+                Prices displayed include taxes and may change based on
+                availability. You can review any additional fees before
+                checkout. Prices are not final until you complete your purchase.
+              </div>
+              <div id="sortingdiv">
+                <select name="" id="selectsorting">
+                  <option value="pricelth">Price (Lowest)</option>
+                  <option value="pricehtl">Price (Highest)</option>
+                  <option value="durationlth">Duration (Shortest)</option>
+                  <option value="durationlth">Duration (Longest)</option>
+                  <option value="departearliest">Departure (Earliest)</option>
+                  <option value="departlatest">Departure (Latest)</option>
+                  <option value="arrivalearliest">Arrival (Latest)</option>
+                  <option value="arrivallatest">Arrival (Latest)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="resultportions d-grid gap-2" id="flightresults">
+            <!--FLIGHT RESULTS BUTTON TO OPEN THE MODAL  -->
+            <button
+              type="button"
+              class="btn btn-default mymodalbtn"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              <div class="panel panel-default flightresult">
+                <div class="timing">
+                  <p class="deparrtime">`${dept}-${$arr}`</p>
+                  <p class="traveldestinations">`${dept_iata}-${$arr_iata}`</p>
+                  <p class="multipleplanes">
+                    <span
+                      ><img
+                        class="flightlogoinresults"
+                        src="https://previews.123rf.com/images/veronawinner/veronawinner1904/veronawinner190400005/124104248-plane-line-icon-isolated-on-white-background-airplane-symbol-in-flat-style-airplane-sign-abstract-pl.jpg"
+                        alt=""
+                    /></span>
+                    Multiple Airlines
+                  </p>
+                </div>
+                <div class="duration"></div>
+                <div class="pricing">
+                  <div class="price">${price}</div>
+                  <div class="triptyperesult">Roundtrip per traveler</div>
+                  <div class="promo">
+                    <span
+                      ><img
+                        class="flightlogoinresults makecircle"
+                        src="https://www.kindpng.com/picc/m/94-949916_airplane-wing-clip-art-vehicle-black-and-white.png"
+                        alt="footballlogo"
+                    /></span>
+                    Earn ${price/100} Orbucks
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+          <div id="modalportion">
+                        <!-- -----Modal ----------------------------- -->
+                        <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Modal title
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">...</div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="flightsearchscript/flightsearch.js"></script>
