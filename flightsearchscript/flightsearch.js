@@ -1,12 +1,9 @@
 /////////STORING TRAVELLERS COUNT BY TOP RIBBON///////////
 // import  navbar from '../flightsearchscript/navbar.js';
 // document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
-<<<<<<< HEAD
-=======
  
 // import  navbar from '../flightsearchscript/navbar.js';
 // document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
->>>>>>> cfed4163de78619949574986fe8fd23f0a136d17
 var listofairlines = new Set();
 var travellersobj = JSON.parse(localStorage.getItem("travellerslist")) || {
   adult: 1,
@@ -250,9 +247,6 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 
 function redirect() {
   window.location.href = "returnflight.html";
-<<<<<<< HEAD
-}
-=======
 }
 
 document.getElementById("signIn").addEventListener("click", myFunction);
@@ -268,4 +262,3 @@ function myFunction() {
 document.getElementById("signIn").innerText = object.firstName;
 document.getElementById("userName").innerText = object.firstName;
 document.getElementById("emailOfuser").innerText = object.email;
->>>>>>> cfed4163de78619949574986fe8fd23f0a136d17
