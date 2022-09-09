@@ -80,11 +80,12 @@ var data_airlabs = new URLSearchParams({
 });
 console.log(data_airlabs);
 var apiairlabs = `https://airlabs.co/api/v9/schedules?${data_airlabs}`;
-//////////////////////searchline here
-var sortselect = document.getElementById("selectsorting").value;
-
-console.log(sortselect);
+//////////////////////////////searchline here
 // searchflights();
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+
 async function searchflights() {
   try {
     var res = await fetch(apiairlabs);
@@ -106,9 +107,29 @@ function sortingfunction(data) {
       return a.flight_number - b.flight_number;
     });
   }
-  if (sortselect == "pricehtl") {
+  else if (sortselect == "pricehtl") {
     data.sort((a, b) => {
       return b.flight_number - a.flight_number;
+    });
+  }
+  else if (sortselect == "departlatest") {
+    data.sort((a, b) => {
+      return b.dep_time_ts - a.dep_time_ts;
+    });
+  }
+  else if (sortselect == "departearliest") {
+    data.sort((a, b) => {
+      return a.dep_time_ts - b.dep_time_ts;
+    });
+  }
+  else if (sortselect == "durationlth") {
+    data.sort((a, b) => {
+      return a.duration - b.duration;
+    });
+  }
+  else if (sortselect == "durationhtl") {
+    data.sort((a, b) => {
+      return b.duration - a.duration;
     });
   }
   displayresults(data);
@@ -207,4 +228,3 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 function redirect() {
   window.location.href = "returnflight.html";
 }
-// document.getElementById("submitbutton").addEventListener("click", redirect)
