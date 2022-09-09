@@ -1,0 +1,71 @@
+#box {
+   height: 1000;
+  width: 70%;
+  border: 1px solid teal;
+  margin: auto;
+ 
+  
+}
+#bags {
+  height: 350px;
+  width:   500px;
+  border: 1px solid teal;
+  margin: 20px;
+  background-color: white;
+  
+}
+ #container {
+    display: flex;
+    margin: auto;
+  justify-content: space-around;
+   width: 90%;
+   row-gap: 10px;
+   
+  } 
+  .ramesh{
+    height: 200px;
+    width: 600px;
+    border: 1px solid red;
+    margin: 20px;
+    background-color:white;
+  }
+  body{
+background-color: rgba(128, 128, 128, 0.103) ;
+}
+.suresh{
+height: 45px;
+width: 70%;
+margin-top: 20px;
+margin-block: 5px;
+background-color: brown;
+color: white;
+font-size: 20px;
+margin-left: 30px;
+
+}
+h2{
+text-align: left;
+text-size-adjust: 10px;
+margin-left:10px;
+}
+p{
+text-align: left;
+text-size-adjust: 10px;
+margin-left:10px;
+}
+h3{
+text-align: left;
+text-size-adjust: 10px;
+margin-left:10px;
+}
+
+a{
+text-align: left;
+text-size-adjust: 10px;
+margin-left:10px;
+}
+h4{
+text-align: left;
+text-size-adjust: 10px;
+margin-left:10px;
+}
