@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbitz Hotel Deals,Flight,Cheap Vaction and Rentel Cars</title>
+    <link rel="stylesheet" href="../Style/commenenavbar.css" />
+    <link rel="stylesheet" href="../Style/index.css" />
+    <link rel="stylesheet" href="../Style/homePage.css" />
+    <script defer src="../Scripts/homePage.js" type="module"></script>
+
+    <script src="https://mui.com/x/react-date-pickers/date-range-picker/#BasicDateRangePicker.js"></script>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <link rel="stylesheet" href="../Style/footer.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,200"
+    />
+
+    <script defer src="../Scripts/index.js" type="module"></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/jquery/1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" /> -->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css"
+    />
+    <link
+      type="image/x-icon"
+      href="https://www.orbitz.com/favicon.ico"
+      sizes="16x16 32x32"
+      rel="shortcut icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"
+    ></script>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <nav id="navbar"></nav>
+
+    <div id="backGround">
+      <div id="search-body">
+        <div>
+          <div id="hotel-option">
+            <div id="stay">
+              <p>Stay</p>
+            </div>
+            <div id="flight">
+              <p>Flights</p>
+            </div>
+            <div id="Cars">
+              <p>Cars</p>
+            </div>
+            <div id="Package">
+              <p>Packages</p>
+            </div>
+            <div id="toDo">
+              <p>Things to do</p>
+            </div>
+            <div id="crusies">
+              <p>Cruies</p>
+            </div>
+          </div>
+          <hr />
+
+          <div id="flightBox">
+            <div id="oneway">
+              <div>
+                <div>
+                  <p>Roundtrip</p>
+                </div>
+
+                <div>
+                  <p>One-way</p>
+                </div>
+                <div>
+                  <p>Multi-city</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <p>1 traveler</p>
+                  <span class="material-symbols-outlined">
+                    arrow_drop_down
+                  </span>
+                </div>
+                <div>
+                  <p>Economy</p>
+                  <span class="material-symbols-outlined">
+                    arrow_drop_down
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div id="searchDiv">
+              <div class="first-box first-box-flight">
+                <div>
+                  <span class="material-symbols-outlined"> pin_drop </span>
+                </div>
+
+                <input
+                  type="text"
+                  id="leavingFrom"
+                  autocomplete="off"
+                  placeholder="Leaving from"
+                />
+              </div>
+
+              <div class="sec-box sec-box-flight">
+                <div>
+                  <span class="material-symbols-outlined"> pin_drop </span>
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="goingTo"
+                    autocomplete="off"
+                    placeholder="Going to"
+                  />
+                </div>
+              </div>
+              <div class="third-box third-box-flight">
+                <div>
+                  <span class="material-symbols-outlined"> today </span>
+                </div>
+                <div>
+                  <p class="heading">Departure</p>
+
+                  <input
+                    type="text"
+                    name="datefilter"
+                    id="startDate"
+                    value=""
+                    placeholder="08/09/2022"
+                  />
+                </div>
+              </div>
+              <div class="forth-box forth-box-flight">
+                <div>
+                  <span class="material-symbols-outlined"> today </span>
+                </div>
+                <div>
+                  <p class="heading">Returing</p>
+
+                  <input
+                    type="text"
+                    name="enddatefilter"
+                    id="endDate"
+                    placeholder="12/09/2022"
+                  />
+                </div>
+              </div>
+            </div>
+            <div id="serachItem"></div>
+
+            <div id="landingDiv"></div>
+
+            <div></div>
+
+            <div id="check">
+              <div>
+                <input type="checkBox" name="" id="" />
+                <span>Add a place to stay</span>
+              </div>
+              <div>
+                <input type="checkBox" name="" id="" />
+                <span>Add car</span>
+              </div>
+            </div>
+            <div>
+              <button class="searchButton" id="searchButton">Search</button>
+            </div>
+          </div>
+        </div>
+        <div id="search">
+          <div id="searchDiv">
+            <div class="first-box">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+
+              <p>Going to</p>
+            </div>
+
+            <div class="sec-box">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Check-in</p>
+                <p>Sep 5</p>
+              </div>
+            </div>
+            <div class="third-box">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Check-out</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+            <div class="forth-box">
+              <div>
+                <span class="material-symbols-outlined"> person </span>
+              </div>
+              <div>
+                <p class="heading">Traveler</p>
+                <p>1 room,2 traveler</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="check">
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add Flight</span>
+            </div>
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add car</span>
+            </div>
+          </div>
+          <div>
+            <button class="searchButton">Search</button>
+          </div>
+        </div>
+        <div id="carRenetel">
+          <div id="oneway">
+            <div>
+              <div>
+                <p>Roundtrip</p>
+              </div>
+
+              <div>
+                <p>One-way</p>
+              </div>
+              <div>
+                <p>Multi-city</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>1 traveler</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+              <div>
+                <p>Economy</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="searchDiv">
+            <div class="first-box first-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+
+              <p>Leaving from</p>
+            </div>
+
+            <div class="sec-box sec-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+              <div>
+                <p>Going to</p>
+              </div>
+            </div>
+            <div class="third-box third-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Departure</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+            <div class="forth-box forth-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Returing</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="check">
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add a place to stay</span>
+            </div>
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add car</span>
+            </div>
+          </div>
+          <div>
+            <button class="searchButton">Search</button>
+          </div>
+        </div>
+        <div id="Packages">
+          <div id="oneway">
+            <div>
+              <div>
+                <p>Roundtrip</p>
+              </div>
+
+              <div>
+                <p>One-way</p>
+              </div>
+              <div>
+                <p>Multi-city</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>1 traveler</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+              <div>
+                <p>Economy</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="searchDiv">
+            <div class="first-box first-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+
+              <p>Leaving from</p>
+            </div>
+
+            <div class="sec-box sec-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+              <div>
+                <p>Going to</p>
+              </div>
+            </div>
+            <div class="third-box third-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Departure</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+            <div class="forth-box forth-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Returing</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="check">
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add a place to stay</span>
+            </div>
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add car</span>
+            </div>
+          </div>
+          <div>
+            <button class="searchButton">Search</button>
+          </div>
+        </div>
+        <div id="thingsTodo">
+          <div id="oneway">
+            <div>
+              <div>
+                <p>Roundtrip</p>
+              </div>
+
+              <div>
+                <p>One-way</p>
+              </div>
+              <div>
+                <p>Multi-city</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>1 traveler</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+              <div>
+                <p>Economy</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="searchDiv">
+            <div class="first-box first-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+
+              <p>Leaving from</p>
+            </div>
+
+            <div class="sec-box sec-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+              <div>
+                <p>Going to</p>
+              </div>
+            </div>
+            <div class="third-box third-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Departure</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+            <div class="forth-box forth-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Returing</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="check">
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add a place to stay</span>
+            </div>
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add car</span>
+            </div>
+          </div>
+          <div>
+            <button class="searchButton">Search</button>
+          </div>
+        </div>
+        <div id="Cruies">
+          <div id="oneway">
+            <div>
+              <div>
+                <p>Roundtrip</p>
+              </div>
+
+              <div>
+                <p>One-way</p>
+              </div>
+              <div>
+                <p>Multi-city</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <p>1 traveler</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+              <div>
+                <p>Economy</p>
+                <span class="material-symbols-outlined"> arrow_drop_down </span>
+              </div>
+            </div>
+          </div>
+
+          <div id="searchDiv">
+            <div class="first-box first-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+
+              <p>Leaving from</p>
+            </div>
+
+            <div class="sec-box sec-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> pin_drop </span>
+              </div>
+              <div>
+                <p>Going to</p>
+              </div>
+            </div>
+            <div class="third-box third-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Departure</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+            <div class="forth-box forth-box-flight">
+              <div>
+                <span class="material-symbols-outlined"> today </span>
+              </div>
+              <div>
+                <p class="heading">Returing</p>
+
+                <p>Sep 6</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="check">
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add a place to stay</span>
+            </div>
+            <div>
+              <input type="checkBox" name="" id="" />
+              <span>Add car</span>
+            </div>
+          </div>
+          <div>
+            <button class="searchButton">Search</button>
+          </div>
+        </div>
+      </div>
+      <div id="para">
+        <h2>End of summer sale</h2>
+        <p>
+          Explore somewhere new and get 20% or more* off select hotels with
+          Insider Prices.
+        </p>
+        <button class="button">See deals</button>
+      </div>
+    </div>
+
+    <div id="container">
+      <div id="travelPlan">
+        <img
+          src="https://i.postimg.cc/XqKTwcV3/Screenshot-2022-09-05-174015.png"
+          alt=""
+        />
+      </div>
+
+      <div id="featured">
+        <h1>Featured offers</h1>
+        <div id="featuredDiv">
+          <div>
+            <div>
+              <h2>Last-minute deals</h2>
+              <p>Getaway today</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>All-inclusive resort</h2>
+              <p>Enjoy sun and fun</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>Insider Prices</h2>
+              <p>Members get rewarded</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h2>Jet and reset</h2>
+              <p>Fly somewhere beacgy and warm</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="todeals">
+        <div id="backGround2">
+          <div>
+            <div>
+              <h4>Today's top deals</h4>
+              <p>Vactions are even more rewarding with our best offers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="cancleTrip">
+        <h1>Here to help keep you on the move</h1>
+        <img
+          src="https://i.postimg.cc/7Y0Fn6GL/Screenshot-2022-09-06-015417.png"
+          alt=""
+        />
+      </div>
+
+      <div id="travelingTips">
+        <h1>Traveling tips</h1>
+        <div id="traveling">
+          <div>
+            <div>
+              <div>
+                <h2>National Parks</h2>
+                <p>There's plenty to keep you busy.</p>
+                <button class="button">Learn more</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <h2>The perfect road trip</h2>
+                <p>Find an adventure for every season.</p>
+                <button class="button">Read on</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="app">
+        <img
+          src="https://i.postimg.cc/qM76S7kT/Screenshot-2022-09-06-022211.png"
+          alt=""
+        />
+      </div>
+      <div id="moreDesti">
+        <h1>More destinations</h1>
+        <img
+          src="https://i.postimg.cc/3xN9Cf4r/Screenshot-2022-09-06-023553.png"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  $('input[name="daterange"]').daterangepicker();
+  $(function () {
+    $('input[name="datefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+        cancelLabel: "Clear",
+      },
+    });
+    $('input[name="enddatefilter"]').daterangepicker({
+      autoUpdateInput: false,
+      locale: {
+        cancelLabel: "Clear",
+      },
+    });
+
+    $('input[name="datefilter"]').on(
+      "apply.daterangepicker",
+      function (ev, picker) {
+        $(this).val(picker.startDate.format("MM/DD/YYYY"));
+        $('input[name="enddatefilter').val(picker.endDate.format("MM/DD/YYYY"));
+        // document.getElementById("enddatefilter").value=picker.endDate.format('MM/DD/YYYY');
+      }
+    );
+    $('input[name="enddatefilter"]').on(
+      "apply.daterangepicker",
+      function (ev, picker) {
+        $(this).val(picker.endDate.format("MM/DD/YYYY"));
+        // document.getElementById("enddatefilter").value=picker.endDate.format('MM/DD/YYYY');
+      }
+    );
+
+    $('input[name="datefilter"]').on(
+      "cancel.daterangepicker",
+      function (ev, picker) {
+        $(this).val("");
+      }
+    );
+    $('input[name="datefilter"]').on(
+      "cancel.daterangepicker",
+      function (ev, picker) {
+        $(this).val("");
+      }
+    );
+  });
+</script>
