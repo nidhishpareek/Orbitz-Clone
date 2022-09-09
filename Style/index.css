@@ -459,54 +459,7 @@ background-color: #c8edf1;
 .forth-box-flight {
     width: 15% !important;
 }
-.indexPageSignIn{
-    width: 375px;
-    border-radius: 5px;
-    /* margin: 20px; */
-    padding: 20px !important;
-    
 
-}
-.insideSignin{
-    font-weight: bold;
-    text-align: center;
-}
- .button-signIn{
-    width: 100%;
-    height: 40px;
-    border-radius: 3px;
- }
- .indexPageSignIn>div> p{
-        align-items: center;
-            background-color: transparent;
-            color: #1F1F1F;
-            display: flex;
-            font-size: 0.875rem;
-            font-weight: 400;
-            inline-size: 100%;
-            justify-content: flex-start;
-            line-height: 1.125rem;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
- }
- .indexPageSignIn>p{
-    
-            font-size: 1rem;
-            font-weight: 600;
-            height: 2.25rem;
-            /* margin-left: 0; */
-          
-            background-color: rgba(255, 255, 255, 0);
-                color: #007E8F;
-                border-radius: 2px;
-                inline-size: 100%;
-                text-align: center;
-
- }
  #carRenetel,#Packages,#thingsTodo,#Cruies{
     display: none;
  }

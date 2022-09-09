@@ -1,22 +1,28 @@
-.bodyclassmy{
-  background-color: rgb(245,245,245);
+.bodyclassmy {
+  background-color: rgb(245, 245, 245);
 }
-.container{
+
+.container {
   /* border: 1px solid black; */
 }
+
 /* <!-- SEARCH AND FILTER PORTIONS STARTS HERE =----------> */
 #triptype,
 #travellers,
-.topbtn,.planeclassid {
+.topbtn,
+.planeclassid {
   border: none;
-  background-color: rgb(245,245,245); 
+  background-color: rgb(245, 245, 245);
   color: rgb(15, 131, 146);
 }
-#topfilterbuttonoptions>div>button, #topfilterbuttonoptions>div>sel{
+
+#topfilterbuttonoptions>div>button,
+#topfilterbuttonoptions>div>sel {
   border: none;
   color: rgb(15, 131, 146);
-  background-color: rgb(245,245,245);
+  background-color: rgb(245, 245, 245);
 }
+
 .travellersdropdown.travellersdropdown {
   flex-wrap: wrap;
   width: 265px;
@@ -25,38 +31,46 @@
   border-radius: 10px;
   color: rgb(78, 78, 78);
 }
+
 .travellersdropdown.travellersdropdown {
   padding: 10px;
 }
 
-.travellersdropdown > li {
+.travellersdropdown>li {
   margin: 10px;
 }
-.travelerstext > p {
+
+.travelerstext>p {
   margin: 0px;
 }
+
 .travelersdiv {
   display: flex;
   justify-content: space-between;
 }
+
 .travelersbtns {
   display: flex;
   align-items: baseline;
 }
+
 #triptype option {
   color: black;
   padding-inline: 200px;
   padding-block: 5px;
 }
-#topfilterbuttonoptions *{
+
+#topfilterbuttonoptions * {
   font-size: 14px;
 }
+
 .minusbtn,
 .plusbtn {
   padding: 5px 10px 5px 10px;
   border-radius: 50%;
   border: 1px solid rgb(136, 136, 136);
 }
+
 .passangercount {
   padding-inline: 10px;
 }
@@ -66,16 +80,19 @@
   border: none;
   color: rgb(15, 131, 146);
 }
-.planeclassid > option {
+
+.planeclassid>option {
   color: black;
 }
 
 .travelpopupbtndiv {
   text-align: center;
 }
+
 .travelpopupbtndiv button {
   width: 40%;
 }
+
 .moredropdownoption * {
   width: 70px;
   display: flex;
@@ -83,7 +100,8 @@
   justify-content: left;
   padding: 0px 10px;
 }
-.moredropdownoption > li {
+
+.moredropdownoption>li {
   width: 70px;
 }
 
@@ -92,15 +110,17 @@
 }
 
 /* <!--=------------------- RESULTS PORTION ---------------------> */
-#filtersandresults{
+#filtersandresults {
   display: flex;
 }
-#filter{
+
+#filter {
   width: 265px;
   padding-right: 5px;
   margin: 10px;
   border: 1px solid red;
 }
+
 #chooseflighttype {
   overflow-x: hidden;
   overflow-y: hidden;
@@ -113,12 +133,15 @@
 #resultsouterdiv {
   padding: 5px;
 }
+
 #chooseflighttype span {
   width: max-content;
 }
+
 .currentlyactive {
   font-weight: bold;
 }
+
 .flexdatepanel {
   margin: 20px 0px;
   display: flex;
@@ -126,188 +149,247 @@
   padding: 10px 20px;
   align-items: baseline;
   justify-content: space-between;
-  
+
 }
-#flexibledatepanel{
+
+#flexibledatepanel {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.mymodalbtn{
+
+.mymodalbtn {
   background-color: white;
 }
+
 .flexibledateheading {
   font-weight: bold;
   font-size: 16px;
 }
-.compareprices{
+
+.compareprices {
   font-size: 12px;
 }
+
 #flexibledatearrow {
   margin: auto;
   margin-right: 10px;
   justify-content: right;
 }
-#horizontaldivforupperportion{
+
+#horizontaldivforupperportion {
   margin-block: 10px;
 }
-#disclouser{
+
+#disclouser {
   font-size: 12px;
 }
-#disclouserandsorting{
+
+#disclouserandsorting {
   display: flex;
   padding: 10px 20px;
   text-align: left;
   align-items: flex-end;
 }
-#selectsorting{
+
+#selectsorting {
   padding-block: 10px;
 }
-#filtersection{
+
+#filtersection {
   padding: 5px;
 }
-#filterby{
+
+#filterby {
   font-size: 18px;
   font-weight: bold;
 }
-.timefilter{
+
+.timefilter {
   justify-content: start;
   margin: auto;
 }
-.timefilterheading{
+
+.timefilterheading {
   font-weight: bold;
   margin-block: 20px;
 }
-.btndaytime.btndaytime.btndaytime{
+
+.btndaytime.btndaytime.btndaytime {
   padding: 0px;
   text-align: center;
   margin-bottom: 5px;
   border: 1px solid black;
   width: 45%;
 }
-.daytimeimage{
+
+.daytimeimage {
   width: 50px;
   /* height: 50px; */
 }
-.daytimeimage >p{
+
+.daytimeimage>p {
   margin: 0px;
 }
-.daysagment{
+
+.daysagment {
   font-size: 10px;
   margin: 0px;
   font-weight: bold;
 }
-.timesagment{
+
+.timesagment {
   font-size: 10px;
 }
-.flightlogoinresults{
+
+.flightlogoinresults {
   width: 20px;
 }
-.timing.timing{
+
+.timing.timing {
   display: block;
   text-align: start;
 }
-.pricing.pricing{
+
+.pricing.pricing {
   display: block;
 }
-.flightresult{
+
+.flightresult {
   padding: 10px;
   background-color: white;
   display: flex;
-  align-items: baseline   ;
+  align-items: baseline;
   justify-content: space-between;
 }
-.flightresult *{
+
+.flightresult * {
   margin: 2px;
 }
-.deparrtime{
+
+.deparrtime {
   font-weight: bold;
   font-size: 14px;
 }
-.traveldestinations{
+
+.traveldestinations {
   font-size: 12px;
 }
-.multipleplanes{
+
+.multipleplanes {
   font-size: 12px;
 }
-.price{
+
+.price {
   font-weight: bold;
   font-size: 24px;
 }
-.pricing{
+
+.pricing {
   text-align: right;
 }
-.promo{
-  color: rgb(141,0,153);
+
+.promo {
+  color: rgb(141, 0, 153);
 }
-.makecircle{
+
+.makecircle {
   border-radius: 50%;
 }
-.deparrtime{
+
+.deparrtime {
   font-size: 18px;
 }
-.triptyperesult{
+
+.triptyperesult {
   font-size: 12px;
 }
-.promo{
+
+.promo {
   font-size: 14px;
 }
-.duration{
+
+.duration {
   font-size: 14px;
 }
-#timingincard{
+
+#timingincard {
   font-size: 14px;
   font-weight: bold;
 }
-.bold22pxcard{
+
+.bold22pxcard {
   font-size: 22px;
   font-weight: bold;
 }
-.card14px{
+
+.card14px {
   font-size: 14px;
 }
-#showdetails{
+
+#showdetails {
   color: rgb(15, 131, 146);
 }
-#ratecard{
+
+#ratecard {
   border: 1px solid grey;
   padding: 15px 5px;
   margin-top: 10px;
 }
-.carddetails{
+
+.carddetails {
   display: flex;
   justify-content: space-between;
 }
-.carddetails *{
+
+.carddetails * {
   font-size: 14px;
 }
-#submitbutton{
+
+#submitbutton {
   width: 100%;
-  background-color: rgb(200,50,89);
+  background-color: rgb(200, 50, 89);
   border: none;
+}
+
+#headingoffilter {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.airlinediv {
+  display: flex;
+  align-items: baseline;
+}
+
+.airlinename {
+  margin-left: 10px;
 }
 
 @media only screen and (max-width: 800px) {
   #topfilterbuttonoptions {
     display: none;
   }
-  #filtersection{
+
+  #filtersection {
     display: none;
   }
-  #sortingdiv{
+
+  #sortingdiv {
     display: none;
   }
+
   /* .resultportions{
     padding: 0px;
   } */
   /* .mymodalbtn{
     padding: 0%;
   } */
-  .promo{
+  .promo {
     display: none;
   }
-  #resultsouterdiv{
+
+  #resultsouterdiv {
     padding: 0px;
   }
 }
-
