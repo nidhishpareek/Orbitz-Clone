@@ -1,0 +1,170 @@
+
+#serachItem {
+    position: absolute;
+    display: none;
+     
+    left: 3%;
+    top: 136px;
+   
+    width: 31.1%;
+    background-color:white;
+border: 1px solid #999999;
+    overflow: hidden;
+    max-height: 350px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+#flightBox{
+    
+    position: relative;
+}
+#serachItem>div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 40px; */
+    /* margin: 10px; */
+    /* padding: 20px; */
+ 
+  
+}
+#serachItem>div h4{
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px auto;
+}
+#serachItem>div>div{
+    margin-right: 10px;
+}
+#serachItem>div:hover{
+    background-color: aquamarine;
+}
+#serachItem hr{
+    margin: 0;
+}
+#landingDiv{
+        position: absolute;
+            display: none;
+        
+            left:  35.3%;
+            top: 136px;
+           
+            width: 31.1%;
+            background-color: white;
+            border: 1px solid #999999;
+            overflow: hidden;
+            max-height: 350px;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+}
+#landingDiv>div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* height: 40px; */
+    /* margin: 10px; */
+    /* padding: 20px; */
+
+
+}
+
+#landingDiv>div h4 {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0px auto;
+}
+
+#landingDiv>div>div {
+    margin-right: 10px;
+}
+
+#landingDiv>div:hover {
+    background-color: aquamarine;
+}
+
+#landingDiv hr {
+    margin: 0;
+}
+
+.homePage{
+        font-size: 1.125rem !important;
+            font-weight: 700 !important;
+            line-height: 1.375rem !important;
+}
+#account{
+    text-align: center;
+}
+.indexPageSignIn>div>p{
+    display: block;
+    margin: 0;
+}
+#account>button{
+    background-color: #757575;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+}
+.bucks{
+    font-size: 18px !important;
+    font-weight: 700 !important;
+}
+.dropdown-menu{
+
+    width: 320px;
+    
+}#bg-light {
+    background-color:transparent !important;
+}
+.nav-item{
+    margin-top: 0px !important;
+
+}
+@media (min-width: 768px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
