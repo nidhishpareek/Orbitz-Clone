@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="Style/navbar.css">
+    <link rel="stylesheet" href="Style/footer.css"> -->
     <link
       type="image/x-icon"
       href="https://www.orbitz.com/favicon.ico"
@@ -37,7 +39,9 @@
   </head>
 
   <body class="bodyclassmy">
-    <div id="navbarcontainerforflightsearch"></div>
+    <div id="navbarcontainerforflightsearch">
+      <div id="navbar"></div>
+    </div>
     <div class="container">
       <div id="topfilterbuttonoptions">
         <div class="btn-group btn topbtn dropdown triptypeclass">
@@ -244,9 +248,9 @@
               <span>Review your trip</span>
             </div>
             <div class="panel panel-lg panel-default flexdatepanel">
-              <div id="">
+              <div id="flexibledatepanel">
                 <h4 class="flexibledateheading">Flexible dates</h4>
-                <p class="">Compare prices for nearby days</p>
+                <p class="compareprices">Compare prices for nearby days</p>
               </div>
               <span
                 class="glyphicon glyphicon-chevron-down"
@@ -261,8 +265,8 @@
                 checkout. Prices are not final until you complete your purchase.
               </div>
               <div id="sortingdiv">
-                <select name="" id="selectsorting">
-                  <option value="pricelth">Price (Lowest)</option>
+                <select name="" id="selectsorting" >
+                  <option value="pricelth" selected>Price (Lowest)</option>
                   <option value="pricehtl">Price (Highest)</option>
                   <option value="durationlth">Duration (Shortest)</option>
                   <option value="durationlth">Duration (Longest)</option>
@@ -274,88 +278,160 @@
               </div>
             </div>
           </div>
-          <div class="resultportions d-grid gap-2" id="flightresults">
+          <div class="resultportions" id="flightresults">
             <!--FLIGHT RESULTS BUTTON TO OPEN THE MODAL  -->
-            <button
-              type="button"
-              class="btn btn-default mymodalbtn"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              <div class="panel panel-default flightresult">
-                <div class="timing">
-                  <p class="deparrtime">`${dept}-${$arr}`</p>
-                  <p class="traveldestinations">`${dept_iata}-${$arr_iata}`</p>
-                  <p class="multipleplanes">
-                    <span
-                      ><img
-                        class="flightlogoinresults"
-                        src="https://previews.123rf.com/images/veronawinner/veronawinner1904/veronawinner190400005/124104248-plane-line-icon-isolated-on-white-background-airplane-symbol-in-flat-style-airplane-sign-abstract-pl.jpg"
-                        alt=""
-                    /></span>
-                    Multiple Airlines
-                  </p>
+            <div class="d-grid gap-2">
+              <button
+                type="button"
+                class="btn btn-default mymodalbtn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <div class="panel panel-default flightresult">
+                  <div class="timing">
+                    <p class="deparrtime">`${dept}-${$arr}`</p>
+                    <p class="traveldestinations">
+                      `${dept_iata}-${$arr_iata}`
+                    </p>
+                    <p class="multipleplanes">
+                      <span
+                        ><img
+                          class="flightlogoinresults"
+                          src="https://previews.123rf.com/images/veronawinner/veronawinner1904/veronawinner190400005/124104248-plane-line-icon-isolated-on-white-background-airplane-symbol-in-flat-style-airplane-sign-abstract-pl.jpg"
+                          alt=""
+                      /></span>
+                      Multiple Airlines
+                    </p>
+                  </div>
+                  <div class="duration">
+                    <p>hour, minutes</p>
+                  </div>
+                  <div class="pricing">
+                    <div class="price">${price}</div>
+                    <div class="triptyperesult">Roundtrip per traveler</div>
+                    <div class="promo">
+                      <span
+                        ><img
+                          class="flightlogoinresults makecircle"
+                          src="https://www.kindpng.com/picc/m/94-949916_airplane-wing-clip-art-vehicle-black-and-white.png"
+                          alt="footballlogo"
+                      /></span>
+                      Earn ${price/100} Orbucks
+                    </div>
+                  </div>
                 </div>
-                <div class="duration"></div>
-                <div class="pricing">
-                  <div class="price">${price}</div>
-                  <div class="triptyperesult">Roundtrip per traveler</div>
-                  <div class="promo">
-                    <span
-                      ><img
-                        class="flightlogoinresults makecircle"
-                        src="https://www.kindpng.com/picc/m/94-949916_airplane-wing-clip-art-vehicle-black-and-white.png"
-                        alt="footballlogo"
-                    /></span>
-                    Earn ${price/100} Orbucks
+              </button>
+            </div>
+          </div>
+          <div id="modalportion">
+            <!-- -----Modal ----------------------------- -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <div class="headofmodal">
+                      <h5
+                        class="modal-title bold22pxcard"
+                        id="exampleModalLabel"
+                      >
+                        ${destinationobj.cityName}
+                      </h5>
+                      <p id="flightdetailsetc" class="card14px">
+                        indigo * date
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+
+                  <div class="modal-body">
+                    <div id="timedurationdiv">
+                      <div id="timingincard">10:25pm - 11:25pm</div>
+                      <div class="card14px">1h (Nonstop)</div>
+                      <p>
+                        <a id="showdetails" class="card14px" href="">
+                          Show Details</a
+                        >
+                      </p>
+                    </div>
+                    <hr />
+                    <div id="selectedfaircity" class="bold22pxcard">
+                      Selected Fair to delhi
+                    </div>
+                    <div class="card14px">
+                      Your selection applies to all flights
+                    </div>
+
+                    <div id="ratecard">
+                      <div id="price" class="bold22pxcard">$ 70.00</div>
+                      <div id="pricefortravellers card14px"></div>
+                      <div class="card14px">Promo Fare,promo Fare</div>
+                      <div class="card14px">Cabin: Economy</div>
+                      <hr />
+                      <div>
+                        <div class="carddetails">
+                          <p>Carry-on:</p>
+                          <p>Included</p>
+                        </div>
+                        <div class="carddetails">
+                          <p>1st checked bag:</p>
+                          <p>Included</p>
+                        </div>
+                        <div class="carddetails">
+                          <p>2nd checked bag:</p>
+                          <p>$18 to $176</p>
+                        </div>
+                      </div>
+
+                      <div class="modal-footer">
+                        <button type="button" id="submitbutton" class="btn btn-primary" data-bs-dismiss="modal">
+                          Select
+                        </button>
+                      </div>
+                    </div>
+                    <hr />
+                    <div class="bookingtndc card14px">
+                      <p>
+                        Baggage fees reflect the airline's standard fees based
+                        on the selected fare class. Fees may vary based on size
+                        and weight restrictions as well as loyalty programs and
+                        other promotions. For more information, check with
+                        IndiGo
+                      </p>
+                      <p class="bookingtndc card14px">
+                        You can purchase checked bags from IndiGo or through the
+                        link in your confirmation or check-in emails.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </button>
-          </div>
-          <div id="modalportion">
-                        <!-- -----Modal ----------------------------- -->
-                        <div
-                        class="modal fade"
-                        id="exampleModal"
-                        tabindex="-1"
-                        aria-labelledby="exampleModalLabel"
-                        aria-hidden="true"
-                      >
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalLabel">
-                                Modal title
-                              </h5>
-                              <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                              ></button>
-                            </div>
-                            <div class="modal-body">...</div>
-                            <div class="modal-footer">
-                              <button
-                                type="button"
-                                class="btn btn-secondary"
-                                data-bs-dismiss="modal"
-                              >
-                                Close
-                              </button>
-                              <button type="button" class="btn btn-primary">
-                                Save changes
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div id="footer"></div>
   </body>
 </html>
 
-<script type="module" src="flightsearchscript/flightsearch.js"></script>
+<!-- <script type="module">
+  import { footer } from "../component/footer.js";
+  import { navbarHome } from "../component/homePageNavbar.js";
+
+  document.getElementById("footer").innerHTML = footer();
+
+  document.getElementById("navbar").innerHTML = navbarHome();
+</script> -->
+
+<script src="flightsearchscript/flightsearch.js"></script>

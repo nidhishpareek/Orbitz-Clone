@@ -6,7 +6,11 @@
 // var data = new URLSearchParams({
 //   api_key:'50fc71e2-d4d6-4d2b-89c3-0e68b04d8d38',
 //   dep_iata : 'DXB',
+
 //   arr_iata: 'DEL',
+
+
+//`https://airlabs.co/api/v9/schedules?${data_airlabs}`
 var data_airlabs = new URLSearchParams({
   api_key:'50fc71e2-d4d6-4d2b-89c3-0e68b04d8d38',
   dep_iata : 'DXB',
@@ -17,7 +21,7 @@ var data_aviation = new URLSearchParams({
   dep_iata : 'DXB',
   arr_iata: 'DEL',
 });
-var apiairlabs = `https://airlabs.co/api/v9/flights?${data_airlabs}`;
+var apiairlabs = `https://airlabs.co/api/v9/schedules?${data_airlabs}`;
 var aviationstack = `http://api.aviationstack.com/v1/flights?${data_aviation}`;
 show()
 async function show() {

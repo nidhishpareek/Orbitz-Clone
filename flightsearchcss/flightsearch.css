@@ -126,12 +126,22 @@
   padding: 10px 20px;
   align-items: baseline;
   justify-content: space-between;
+  
+}
+#flexibledatepanel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .mymodalbtn{
   background-color: white;
 }
 .flexibledateheading {
   font-weight: bold;
+  font-size: 16px;
+}
+.compareprices{
+  font-size: 12px;
 }
 #flexibledatearrow {
   margin: auto;
@@ -195,6 +205,7 @@
 }
 .timing.timing{
   display: block;
+  text-align: start;
 }
 .pricing.pricing{
   display: block;
@@ -241,6 +252,43 @@
 .promo{
   font-size: 14px;
 }
+.duration{
+  font-size: 14px;
+}
+#timingincard{
+  font-size: 14px;
+  font-weight: bold;
+}
+.bold22pxcard{
+  font-size: 22px;
+  font-weight: bold;
+}
+.card14px{
+  font-size: 14px;
+}
+#showdetails{
+  color: rgb(15, 131, 146);
+}
+#ratecard{
+  border: 1px solid grey;
+  padding: 15px 5px;
+  margin-top: 10px;
+}
+.carddetails{
+  display: flex;
+  justify-content: space-between;
+}
+.carddetails *{
+  font-size: 14px;
+}
+#submitbutton{
+  width: 100%;
+  background-color: rgb(200,50,89);
+  border: none;
+}
+
+ 
+
 @media only screen and (max-width: 800px) {
   #topfilterbuttonoptions {
     display: none;

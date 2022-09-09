@@ -57,46 +57,81 @@ document.getElementById("infantplus").addEventListener("click", () => {
 });
 /////////////////////////////////////////////////////////////////////
 // REAL WORK OF THE FETCH STARTING
-var destinationobj = JSON.parse(localStorage.getItem("")) || {};
-var departingobj = JSON.parse(localStorage.getItem("")) || {};
-// var datestr = JSON.parse(localStorage.getItem("")) || {}
-var dateStr = "2022-9-9";
-const dateconst = new Date(dateStr);
+var destinationobj = JSON.parse(localStorage.getItem("landing"));
+var departingobj = JSON.parse(localStorage.getItem("depature"));
+var dateobj = JSON.parse(localStorage.getItem("dates"));
+
+let startdate = dateobj.startDate;
+let returndate = dateobj.endDate;
+
+const dateconst = new Date(startdate);
 console.log(dateconst); // 👉️ Wed Jun 22 2022
 
 const timestampInMs = dateconst.getTime();
-
+console.log(timestampInMs);
 const unixTimestamp = Math.floor(dateconst.getTime() / 1000);
 console.log(unixTimestamp);
 
+console.log(destinationobj.cityName, departingobj.cityName);
 var data_airlabs = new URLSearchParams({
   api_key: "50fc71e2-d4d6-4d2b-89c3-0e68b04d8d38",
-  dep_iata: departingobj.code,
-  arr_iata: destinationobj.code,
+  dep_iata: departingobj.airportCode,
+  arr_iata: destinationobj.airportCode,
 });
+console.log(data_airlabs);
+var apiairlabs = `https://airlabs.co/api/v9/schedules?${data_airlabs}`;
+//////////////////////searchline here
+var sortselect = document.getElementById('selectsorting').value;
 
-var apiairlabs = `https://airlabs.co/api/v9/flights?${data_airlabs}`;
+console.log(sortselect)
 searchflights();
 async function searchflights() {
   try {
     var res = await fetch(apiairlabs);
     var ans = await res.json();
     console.log(ans);
-    displayresults(ans);
+    sortingfunction(ans.response);
   } catch (err) {
     console.log("falil", err);
   }
 }
+function sortingfunction(data){
+  document.getElementById('selectsorting').addEventListener("change",()=>sortingfunction(data));
+  var sortselect = document.getElementById('selectsorting').value;
 
+  if (sortselect == "pricelth") {
+    data.sort((a, b) => {
+      return a.flight_number - b.flight_number;
+    });
+  }
+  if(sortselect == 'pricehtl'){
+    data.sort((a, b) => {
+      return b.flight_number - a.flight_number;
+    });
+  }
+  displayresults(data)
+}
 function displayresults(data) {
   document.getElementById("flightresults").innerHTML = "";
   data.map((ele) => {
     let div = document.createElement("div");
-    dept = departingobj.place;
-    arr = destinationobj.place;
+    let dept = new Date(ele.dep_time);
+    let arr = new Date(ele.arr_time);
+    console.log(
+      dept.getHours(),
+      dept.getMinutes(),
+      arr.getHours(),
+      arr.getMinutes()
+    );
     dep_iata = ele.dep_iata;
     arr_iata = ele.arr_iata;
+
     price = ele.flight_number;
+    duration = ele.duration;
+    console.log("duration of the flight is ---", duration);
+    flighthours = Math.floor(duration / 60);
+    flightmins = Math.floor(duration % 60);
+    div.setAttribute("class", "d-grid gap-2");
     div.innerHTML = `
     <button
     type="button"
@@ -106,8 +141,8 @@ function displayresults(data) {
   >
     <div class="panel panel-default flightresult">
       <div class="timing">
-        <p class="deparrtime">${dept}-${$arr}</p>
-        <p class="traveldestinations">${dept_iata}-${$arr_iata}</p>
+        <p class="deparrtime">${dept.getHours()}:${dept.getMinutes()}-${arr.getHours()}:${arr.getMinutes()}</p>
+        <p class="traveldestinations">${dep_iata}-${arr_iata}</p>
         <p class="multipleplanes">
           <span
             ><img
@@ -118,9 +153,9 @@ function displayresults(data) {
           Multiple Airlines
         </p>
       </div>
-      <div class="duration"></div>
+      <div class="duration"><p>${flighthours}Hr ${flightmins} Minutes</p></div>
       <div class="pricing">
-        <div class="price">${price}</div>
+        <div class="price">$ ${price}</div>
         <div class="triptyperesult">Roundtrip per traveler</div>
         <div class="promo">
           <span
@@ -134,5 +169,33 @@ function displayresults(data) {
       </div>
     </div>
   </button>`;
+    div.addEventListener("click", () => {
+      showflight(ele, flighthours, flightmins, dept, arr);
+    });
+    document.getElementById("flightresults").append(div);
   });
+}
+
+function showflight(ele, flighthours, flightmins, dept, arr) {
+  document.getElementById(
+    "exampleModalLabel"
+  ).innerText = `${destinationobj.cityName} to ${departingobj.cityName}`;
+  document.getElementById(
+    "flightdetailsetc"
+  ).innerText = `${ele.airline_iata}, ${dateobj.startDate}`;
+  document.getElementById(
+    "timedurationdiv"
+  ).innerHTML = `<p class="deparrtime">${dept.getHours()}:${dept.getMinutes()}-${arr.getHours()}:${arr.getMinutes()}</p>
+  <p>${flighthours}Hr ${flightmins} Minutes</p>`;
+  document.getElementById(
+    "selectedfaircity"
+  ).innerText = `Selected Fair to ${destinationobj.cityName}`;
+  document.getElementById("price").innerText = `$ ${
+    price * (travellersobj.adult + travellersobj.child + travellersobj.infant)
+  }`;
+  document.getElementById(
+    "pricefortravellers"
+  ).innerText = `${price} roundtrip for 1 traveler`;
+  localStorage.setItem("selecteddepartingelement", JSON.stringify(ele));
+  localStorage.setItem("departprice", price);
 }
