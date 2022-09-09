@@ -1,17 +1,26 @@
+.bodyclassmy{
+  background-color: rgb(245,245,245);
+}
 .container{
   border: 1px solid black;
 }
 /* <!-- SEARCH AND FILTER PORTIONS STARTS HERE =----------> */
 #triptype,
 #travellers,
-.topbtn {
+.topbtn,.planeclassid {
   border: none;
+  background-color: rgb(245,245,245); 
   color: rgb(15, 131, 146);
 }
+#topfilterbuttonoptions>div>button, #topfilterbuttonoptions>div>sel{
+  border: none;
+  color: rgb(15, 131, 146);
+  background-color: rgb(245,245,245);
+}
 .travellersdropdown.travellersdropdown {
-  text-overflow: ;
   flex-wrap: wrap;
   width: 265px;
+  font-size: 14px;
   padding: 20px;
   border-radius: 10px;
   color: rgb(78, 78, 78);
@@ -39,8 +48,8 @@
   padding-inline: 200px;
   padding-block: 5px;
 }
-#bookingbugfix{
-  margin-top: -10px;
+#topfilterbuttonoptions *{
+  font-size: 14px;
 }
 .minusbtn,
 .plusbtn {
@@ -113,9 +122,13 @@
 .flexdatepanel {
   margin: 20px 0px;
   display: flex;
+  background-color: white;
   padding: 10px 20px;
   align-items: baseline;
   justify-content: space-between;
+}
+.mymodalbtn{
+  background-color: white;
 }
 .flexibledateheading {
   font-weight: bold;
@@ -177,6 +190,57 @@
 .timesagment{
   font-size: 10px;
 }
+.flightlogoinresults{
+  width: 20px;
+}
+.timing.timing{
+  display: block;
+}
+.pricing.pricing{
+  display: block;
+}
+.flightresult{
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  align-items: baseline   ;
+  justify-content: space-between;
+}
+.flightresult *{
+  margin: 2px;
+}
+.deparrtime{
+  font-weight: bold;
+  font-size: 14px;
+}
+.traveldestinations{
+  font-size: 12px;
+}
+.multipleplanes{
+  font-size: 12px;
+}
+.price{
+  font-weight: bold;
+  font-size: 24px;
+}
+.pricing{
+  text-align: right;
+}
+.promo{
+  color: rgb(141,0,153);
+}
+.makecircle{
+  border-radius: 50%;
+}
+.deparrtime{
+  font-size: 18px;
+}
+.triptyperesult{
+  font-size: 12px;
+}
+.promo{
+  font-size: 14px;
+}
 @media only screen and (max-width: 800px) {
   #topfilterbuttonoptions {
     display: none;
@@ -184,4 +248,20 @@
   #filtersection{
     display: none;
   }
+  #sortingdiv{
+    display: none;
+  }
+  /* .resultportions{
+    padding: 0px;
+  } */
+  /* .mymodalbtn{
+    padding: 0%;
+  } */
+  .promo{
+    display: none;
+  }
+  #resultsouterdiv{
+    padding: 0px;
+  }
 }
+
