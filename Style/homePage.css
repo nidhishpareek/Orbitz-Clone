@@ -78,6 +78,43 @@ border: 1px solid #999999;
 #landingDiv>div>div {
     margin-right: 10px;
 }
+.traveler>div>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin:auto;
+
+}
+.traveler>div>div>div{
+    display: flex;
+
+    
+
+}
+.traveler p{
+    margin: 0;
+}
+.traveler>div>div>div>div:nth-child(1){
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.traveler>div>div>div>div:nth-child(3){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+     border-radius: 50%;
+    border: 1px solid black;
+}
 
 #landingDiv>div:hover {
     background-color: aquamarine;
@@ -86,6 +123,7 @@ border: 1px solid #999999;
 #landingDiv hr {
     margin: 0;
 }
+
 
 @media (min-width: 768px) {
     .animate {

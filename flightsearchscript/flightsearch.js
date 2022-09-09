@@ -257,8 +257,9 @@ function myFunction() {
   } else {
     x.className = x.className.replace(" w3-show", "");
   }
-}var object = JSON.parse(localStorage.getItem("userDetails")) || {};
-
+}
+var object = JSON.parse(localStorage.getItem("userDetails")) || {};
+console.log("kashi")
 document.getElementById("signIn").innerText = object.firstName;
 document.getElementById("userName").innerText = object.firstName;
 document.getElementById("emailOfuser").innerText = object.email;
