@@ -1,0 +1,19 @@
+#flightplan{
+    margin: 0px ;
+}
+#upperroute{
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.arrow{
+    padding-inline: 10px;
+}
+.mainarrow{
+    padding-inline: 15px;
+    font-weight: 900;
+}
+.linktext{
+    font-size: 14px;
+    color: rgb(15, 131, 146);;
+}

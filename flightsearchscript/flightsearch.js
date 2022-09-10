@@ -169,7 +169,7 @@ function displayresults(data) {
           <span
             ><img
               class="flightlogoinresults"
-              src="https://previews.123rf.com/images/veronawinner/veronawinner1904/veronawinner190400005/124104248-plane-line-icon-isolated-on-white-background-airplane-symbol-in-flat-style-airplane-sign-abstract-pl.jpg"
+              src="https://www.kindpng.com/picc/m/94-949916_airplane-wing-clip-art-vehicle-black-and-white.png"
               alt=""
           /></span>
           Multiple Airlines
@@ -183,7 +183,7 @@ function displayresults(data) {
           <span
             ><img
               class="flightlogoinresults makecircle"
-              src="https://www.kindpng.com/picc/m/94-949916_airplane-wing-clip-art-vehicle-black-and-white.png"
+              src="https://www.orbitz.com/static/default/default/images/checkout/loyalty/orbitz_icon-loyalty-md.png"
               alt="footballlogo"
           /></span>
           Earn ${price / 100} Orbucks

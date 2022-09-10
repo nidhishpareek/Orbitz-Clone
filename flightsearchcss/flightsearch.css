@@ -9,38 +9,37 @@
 /* <!-- SEARCH AND FILTER PORTIONS STARTS HERE =----------> */
 #triptype,
 #travellers,
-.topbtn,
-.planeclassid {
+.planeclassid , .topbtn{
   border: none;
-  background-color: rgb(245, 245, 245);
+  background-color:white  ;
   color: rgb(15, 131, 146);
 }
-
-#topfilterbuttonoptions>div>button,
-#topfilterbuttonoptions>div>sel {
+#topfilterbuttonoptions{
+  background-color: white;
+}
+#topfilterbuttonoptions > div> div > button
+{
   border: none;
   color: rgb(15, 131, 146);
-  background-color: rgb(245, 245, 245);
+  background-color: white;
 }
 
-.travellersdropdown.travellersdropdown {
+#travellersdropdown{
   flex-wrap: wrap;
-  width: 265px;
+  width: 290px;
   font-size: 14px;
   padding: 20px;
   border-radius: 10px;
   color: rgb(78, 78, 78);
-}
-
-.travellersdropdown.travellersdropdown {
   padding: 10px;
 }
 
-.travellersdropdown>li {
+
+.travellersdropdown > li {
   margin: 10px;
 }
 
-.travelerstext>p {
+.travelerstext > p {
   margin: 0px;
 }
 
@@ -81,7 +80,7 @@
   color: rgb(15, 131, 146);
 }
 
-.planeclassid>option {
+.planeclassid > option {
   color: black;
 }
 
@@ -101,14 +100,34 @@
   padding: 0px 10px;
 }
 
-.moredropdownoption>li {
+.moredropdownoption > li {
   width: 70px;
 }
 
 .moredropdownoption p {
   padding-left: 10px;
 }
-
+/* Searchbar div ===========---------------============= */
+#searchbarcontainerid{
+  width: 80%;
+}
+#searchDiv{
+  display: flex;
+  padding: 20px;
+}
+.searchbtn{
+  background-color: rgb(200,50,89);
+}
+#placebtnclass{
+  display: flex;
+  align-items: baseline;
+  border: 1px solid grey;
+  background-color: white;
+}
+.destinationdiv{
+  text-align: start;
+  padding: 5px;
+}
 /* <!--=------------------- RESULTS PORTION ---------------------> */
 #filtersandresults {
   display: flex;
@@ -118,7 +137,7 @@
   width: 265px;
   padding-right: 5px;
   margin: 10px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 #chooseflighttype {
@@ -149,7 +168,6 @@
   padding: 10px 20px;
   align-items: baseline;
   justify-content: space-between;
-
 }
 
 #flexibledatepanel {
@@ -228,7 +246,7 @@
   /* height: 50px; */
 }
 
-.daytimeimage>p {
+.daytimeimage > p {
   margin: 0px;
 }
 
@@ -351,20 +369,43 @@
   background-color: rgb(200, 50, 89);
   border: none;
 }
-#headingoffilter{
+#headingoffilter {
   font-size: 20px;
   font-weight: bold;
 }
-.airlinediv{
+.airlinediv {
   display: flex;
   align-items: baseline;
 }
-.airlinename{
+.airlinename {
   margin-left: 10px;
 }
+
+#headingoffilter {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.airlinediv {
+  display: flex;
+  align-items: baseline;
+}
+
+.airlinename {
+  margin-left: 10px;
+}
+
 @media only screen and (max-width: 800px) {
   #topfilterbuttonoptions {
     display: none;
+    color: rgb(0,37,60);
+  }
+  #divlast *{
+    display: none;
+  }
+  #divlast#divlast#divlast#divlast{
+    display: none;
+    color: rgb(0,37,60);
   }
 
   #filtersection {
@@ -387,5 +428,8 @@
 
   #resultsouterdiv {
     padding: 0px;
+  }
+  .w3-dropdown-click{
+    display: none;
   }
 }

@@ -1,6 +1,9 @@
 /////////STORING TRAVELLERS COUNT BY TOP RIBBON///////////
 // import  navbar from '../flightsearchscript/navbar.js';
 // document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
+ 
+// import  navbar from '../flightsearchscript/navbar.js';
+// document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
 var listofairlines = new Set();
 var travellersobj = JSON.parse(localStorage.getItem("travellerslist")) || {
   adult: 1,
@@ -57,7 +60,7 @@ document.getElementById("infantplus").addEventListener("click", () => {
 });
 /////////////////////////////////////////////////////////////////////
 // REAL WORK OF THE FETCH STARTING
-var destinationobj = JSON.parse(localStorage.getItem("depature")); 
+var destinationobj = JSON.parse(localStorage.getItem("depature"));
 var departingobj = JSON.parse(localStorage.getItem("landing"));
 var dateobj = JSON.parse(localStorage.getItem("dates"));
 
@@ -223,7 +226,7 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
   ).innerText = `${destinationobj.cityName} to ${departingobj.cityName}`;
   document.getElementById(
     "flightdetailsetc"
-  ).innerText = `${ele.airline_iata}, ${dateobj.startDate}`;
+  ).innerText = `${ele.airline_iata}, ${dateobj.endDate}`;
   document.getElementById(
     "timingincard"
   ).innerHTML = `<p class="deparrtime">${dept.getHours()}:${dept.getMinutes()}-${arr.getHours()}:${arr.getMinutes()}</p>
@@ -238,10 +241,24 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
   document.getElementById(
     "pricefortravellers"
   ).innerText = `${ele.flight_number} roundtrip for 1 traveler`;
-  localStorage.setItem("selecteddepartingelement", JSON.stringify(ele));
-  localStorage.setItem("departprice", ele.flight_number);
+  localStorage.setItem("selectedreturningelement", JSON.stringify(ele));
+  localStorage.setItem("returnprice", ele.flight_number);
 }
 
 function redirect() {
-  window.location.href = "checkout.html";
+  window.location.href = "../ checkout.html";
 }
+
+document.getElementById("signIn").addEventListener("click", myFunction);
+function myFunction() {
+  var x = document.getElementById("Demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}var object = JSON.parse(localStorage.getItem("userDetails")) || {};
+
+document.getElementById("signIn").innerText = object.firstName;
+document.getElementById("userName").innerText = object.firstName;
+document.getElementById("emailOfuser").innerText = object.email;

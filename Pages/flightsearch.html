@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Style/navbar.css">
-    <link rel="stylesheet" href="../Style/footer.css">
-      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-       <link rel="stylesheet" href="../Style/commenenavbar.css" />
-       <link
+    <link rel="stylesheet" href="../Style/navbar.css" />
+    <link rel="stylesheet" href="../Style/footer.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="../Style/commenenavbar.css" />
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,200"
     />
@@ -51,8 +51,9 @@
     <div id="navbarcontainerforflightsearch">
       <div id="navbar"></div>
     </div>
-    <div class="container">
-      <div id="topfilterbuttonoptions">
+
+    <div id="topfilterbuttonoptions">
+      <div class="container whitebackground">
         <div class="btn-group btn topbtn dropdown triptypeclass">
           <select class="form-select" name="" id="triptype">
             <option value="">
@@ -78,7 +79,7 @@
             Traveler
           </button>
 
-          <ul class="dropdown-menu travellersdropdown">
+          <ul class="dropdown-menu travellersdropdown" id="travellersdropdown">
             <li>
               <p>We allow up to 6 travelers total per booking.</p>
             </li>
@@ -168,11 +169,41 @@
             </li>
           </ul>
         </div>
+        <br />
       </div>
+      <div class="container" id="searchbarcontainerid">
+        <!-- Import searchbar here -->
+
+        <!-- ////////////////////searechbar start here -->
+        <!-- <div id="searchbardiv" class="btn btn-group btn-group-justi">
+          <div class="btn btn-default " id="placebtnclass">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div class="destinationdiv">
+              <div>Flying From</div>
+              <div id="departnamehere">Jaipur</div>
+            </div>
+          </div>
+        </div>
+        <div id="searchbardiv" class="btn btn-group btn-group-justi">
+          <div class="btn btn-default " id="placebtnclass">
+            <i class="bi bi-geo-alt-fill"></i>
+            <div class="destinationdiv">
+              <div>Flying From</div>
+              <div id="departnamehere">Jaipur</div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
 
       <div id="searchbardiv"></div>
 
+
+
+    <div class="container">
       <!-- SEARCH AND FILTER PORTIONS STARTS HERE -->
+
       <div id="filtersandresults">
         <!-- FILTER PORTION -->
         <div id="filtersection">
@@ -181,7 +212,7 @@
             <div id="headingoffilter">Airlines</div>
             <div id="airlines">
               <div class="airlinediv">
-                <input type="checkbox">
+                <input type="checkbox" />
                 <p class="airlinename">All Airlines</p>
               </div>
             </div>
@@ -416,13 +447,13 @@
 
                       <div class="modal-footer">
                         <button
-                        onclick="redirect()"
+                          onclick="redirect()"
                           type="button"
                           id="submitbutton"
                           class="btn btn-primary"
                           data-bs-dismiss="modal"
                         >
-                         Select
+                          Select
                         </button>
                       </div>
                     </div>
