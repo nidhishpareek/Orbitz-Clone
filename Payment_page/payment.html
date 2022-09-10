@@ -64,7 +64,7 @@
       </div>
 
     </nav>
-    <div id="mainBox">
+    <div id="mainBox" class="container">
         <div class="head">
             <h1>Secure booking - only takes a few minutes!</h1>
         </div>
@@ -72,7 +72,7 @@
             <div class="leftBox">
                 <div class="firstBox">
                     <div class="signInAs">Signed in as</div>
-                    <div class="mail">sanjay123123@gmail.com</div>
+                    <div class="mail" id="mail">sanjay123123@gmail.com</div>
                     <p id="confirmation">We'll send your confirmation here.</p>
                     <div id="logoImage">
                         <div>
@@ -837,21 +837,23 @@
                 </div>
             </div>
             <div class="rightBox">
-                <div>
+
                     <h2>Roundtrip flight</h2>
-                    <p>1 ticket: 1 adult</p>
+                    <div id="tickets">1 ticket: 1 adult</div>
+
                     <hr>
-                    <span>Ahmedabad (AMD) to Delhi (DEL)</span>
-                    <h3>Thu, Sep 22</h3>
-                    <span>7:25pm - 8:55pm (1h 30m)</span><br>
-                    <p class="flightName">IndiGo 6941</p><br><br>
+                    <span id="destination">Ahmedabad (AMD) to Delhi (DEL)</span>
+                    <h3 id="dateshow">Thu, Sep 22</h3>
+                    <span id="timing">7:25pm - 8:55pm (1h 30m)</span><br>
+                    <p class="flightName" id="flightname">IndiGo 6941</p><br><br>
                     <hr>
-                    <br><br>
+                    <div id="flexdiv">
                     <h3>Your price summary</h3>
-                    <div></div>
+                    <div id="price">$1320</div>
+                </div>
                     <hr>
                     <div>All prices quoted in US dollars.</div>
-                </div>
+
             </div>
         </div>
     </div>

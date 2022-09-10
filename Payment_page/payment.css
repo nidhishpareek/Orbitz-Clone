@@ -365,19 +365,35 @@ body {
 }
 
 #completeBook {
-    padding: 15px 20px;
+    padding: 20px 30px;
     font-size: 15px;
     font-weight: bold;
     color: white;
-    background-color: #bb0838;
+    background-color:rgb(218,51,95);
     border: none;
     border-radius: 5px;
 }
 
 #completeBook:hover {
     cursor: pointer;
-    background-color: #da0941;
+    background-color: #rgb(218,51,95);
 }
 #mainBox{
     margin: 50px;
+    margin-inline: 150px;
+    
+}
+#flexdiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+@media only screen and (max-width: 1500px){
+    #personalinfo *{
+        display: flex;
+        flex-direction: column;
+    }
+    #rightbox{
+        display: none;
+    }
 }
