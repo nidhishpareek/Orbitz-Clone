@@ -6,6 +6,13 @@
       "lastName": "Shekhda",
       "password": "2010",
       "id": 1
+    },
+    {
+      "email": "nevil@12",
+      "firstName": "Kashiram",
+      "lastName": "Shekhda",
+      "password": "2010",
+      "id": 2
     }
   ]
 }
