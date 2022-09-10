@@ -31,11 +31,11 @@ document.getElementById(
 ).innerHTML = `${destinationobj.cityName} to ${departingobj.cityName}`;
 
 document.getElementById("dateshow").innerHTML = `${startdate}`
-document.getElementById("timing").innerHTML= `>${destdept.getHours()}:${destdept.getMinutes()}-${destarr.getHours()}:${destarr.getMinutes()}`
+document.getElementById("timing").innerHTML= `${destdept.getHours()}:${destdept.getMinutes()}-${destarr.getHours()}:${destarr.getMinutes()}`
 document.getElementById("flightname").innerHTML= `${destflight.airline_iata}  ${destflight.flight_iata}`
 
-
-document.getElementById("price").innerHTML = `$ ${destflight.flight_number + returnflight.flight_number}`
+var price = parseInt(destflight.flight_number) + parseInt(returnflight.flight_number)
+document.getElementById("price").innerHTML = `$ ${price}`
 
 
 function completed(){

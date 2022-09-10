@@ -388,12 +388,40 @@ body {
     justify-content: space-between;
     align-items: baseline;
 }
-@media only screen and (max-width: 1500px){
+#tickets *{
+    font-size: 16px;
+    margin: 5px;
+}
+#mydiv{
+    font-size: 16px;
+    margin: 5px;
+    height: fit-content;
+}
+@media only screen and (min-widt:700px) and (max-width: 1500px){
     #personalinfo *{
         display: flex;
         flex-direction: column;
     }
     #rightbox{
+        display: none;
+    }
+}
+@media only screen and (max-width:699px){
+    h1{
+        font-size: 20px ;
+    }
+    #body{
+        margin: 5px;
+        width: 100%;
+        flex-direction: column;
+    }
+    #personalinfo{
+        display: none;
+    }
+    #rightbox{
+        display: none;
+    }
+    form{
         display: none;
     }
 }
