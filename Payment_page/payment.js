@@ -40,5 +40,5 @@ document.getElementById("price").innerHTML = `$ ${destflight.flight_number + ret
 
 function completed(){
   alert("Flights Booked successfully")
-  window.location.href = '../pages/index.html'
+  window.location.href = '../pages/homePage.html'
 }
