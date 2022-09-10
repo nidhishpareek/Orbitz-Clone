@@ -31,6 +31,9 @@ var printIt = debounch(searchData, 1000);
 console.log(printIt());
 function debounch(fn, delay) {
   let timeid;
+
+  var div = document.getElementById("serachItem");
+  div.innerHTML = `<img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif"style="width:100%" alt="">`;
   return function () {
     clearTimeout(timeid);
     timeid = setTimeout(function () {
@@ -86,10 +89,12 @@ async function searchDataLanding() {
   }
 }
 
-var printIt2 = debounch2(searchDataLanding, 1000);
+var printIt2 = debounch2(searchDataLanding, 500);
 // console.log(printIt());
 function debounch2(fn, delay) {
   let timeid;
+  var div = document.getElementById("landingDiv");
+  div.innerHTML = `<img src="https://media2.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif"style="width:100%" alt="">`;
   return function () {
     clearTimeout(timeid);
     timeid = setTimeout(function () {

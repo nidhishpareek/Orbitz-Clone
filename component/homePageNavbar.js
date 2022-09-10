@@ -2,7 +2,7 @@ export const navbarHome = () => {
   return `<div id="navbar-div">
             <div id="first">
                 <div id="logo-nav">
-                    <a href="index.html">
+                    <a href="homePage.html">
                         <img src="https://www.orbitz.com/_dms/header/logo.svg?locale=en_US&siteid=70201&2" alt="">
                     </a>
                 </div>

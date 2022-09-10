@@ -265,6 +265,10 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+document.getElementById("signOut").addEventListener("click", function () {
+  localStorage.clear();
+  location.href = "../Pages/index.html";
+});
 var object = JSON.parse(localStorage.getItem("userDetails")) || {};
 console.log("kashi")
 document.getElementById("signIn").innerText = object.firstName;

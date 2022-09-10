@@ -253,7 +253,8 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 }
 
 function redirect() {
-  window.location.href = "../ checkout.html";
+  console.log("kashi")
+  window.location.href = "../Payment_page/payment.html";
 }
 
 document.getElementById("signIn").addEventListener("click", myFunction);
@@ -264,7 +265,12 @@ function myFunction() {
   } else {
     x.className = x.className.replace(" w3-show", "");
   }
-}var object = JSON.parse(localStorage.getItem("userDetails")) || {};
+}
+document.getElementById("signOut").addEventListener("click", function () {
+  localStorage.clear();
+  location.href = "../Pages/index.html";
+});
+var object = JSON.parse(localStorage.getItem("userDetails")) || {};
 
 document.getElementById("signIn").innerText = object.firstName;
 document.getElementById("userName").innerText = object.firstName;
