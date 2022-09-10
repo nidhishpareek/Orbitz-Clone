@@ -1,9 +1,6 @@
 /////////STORING TRAVELLERS COUNT BY TOP RIBBON///////////
 // import  navbar from '../flightsearchscript/navbar.js';
 // document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
- 
-// import  navbar from '../flightsearchscript/navbar.js';
-// document.getElementById("navbarcontainerforflightsearch").innerHTML= navbar();
 var listofairlines = new Set();
 var travellersobj = JSON.parse(localStorage.getItem("travellerslist")) || {
   adult: 1,
@@ -60,8 +57,8 @@ document.getElementById("infantplus").addEventListener("click", () => {
 });
 /////////////////////////////////////////////////////////////////////
 // REAL WORK OF THE FETCH STARTING
-var destinationobj = JSON.parse(localStorage.getItem("landing"));
-var departingobj = JSON.parse(localStorage.getItem("depature"));
+var destinationobj = JSON.parse(localStorage.getItem("depature")); 
+var departingobj = JSON.parse(localStorage.getItem("landing"));
 var dateobj = JSON.parse(localStorage.getItem("dates"));
 
 let startdate = dateobj.startDate;
@@ -246,20 +243,5 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 }
 
 function redirect() {
-  window.location.href = "returnflight.html";
+  window.location.href = "checkout.html";
 }
-
-document.getElementById("signIn").addEventListener("click", myFunction);
-function myFunction() {
-  var x = document.getElementById("Demo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else {
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-var object = JSON.parse(localStorage.getItem("userDetails")) || {};
-console.log("kashi")
-document.getElementById("signIn").innerText = object.firstName;
-document.getElementById("userName").innerText = object.firstName;
-document.getElementById("emailOfuser").innerText = object.email;

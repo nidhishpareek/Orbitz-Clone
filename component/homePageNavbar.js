@@ -118,10 +118,16 @@ export const navbarHome = () => {
                             <hr>
                             <p style="color: #007E8F;" id="signOut">Sign out</p>
                         </div>
-
                     </div>
+</div>
                 </div>
-
-
+<div class="mobile-icon">
+                    <span class="material-symbols-outlined">
+shopping_bag
+</span>             
+                    <span class="material-symbols-outlined">
+person
+</span>
+</div>
             </div>`;
 };

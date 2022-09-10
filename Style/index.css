@@ -1,80 +1,76 @@
-body{
-    margin: 0px;
-    background-color: #f4f5f4 !important;
+body {
+  margin: 0px;
+  background-color: #f4f5f4 !important;
 }
-#backGround{
-background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/08/13/ORB_SummerSale_imgB_1920x1440_20210813.jpg");
-    background-position: bottom;
+#backGround {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/08/13/ORB_SummerSale_imgB_1920x1440_20210813.jpg");
+  background-position: bottom;
 
-    background-repeat: no-repeat;
-    background-size: cover;
-        background-position: bottom !important;
-            background-size: 100% auto;
-            inline-size: 100%;
-                place-self: stretch;
-                position: relative;
-    padding-top: 50PX;
-    padding-bottom: 30px;
-    aspect-ratio: 4 / 1;
-        opacity: 1;
-            content-visibility: unset;
-            transition: opacity 1s;
-    /* background-attachment: fixed; */
-    height: auto;
-    
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom !important;
+  background-size: 100% auto;
+  inline-size: 100%;
+  place-self: stretch;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  aspect-ratio: 4 / 1;
+  opacity: 1;
+  content-visibility: unset;
+  transition: opacity 1s;
+  /* background-attachment: fixed; */
+  height: auto;
 }
-#search-body{
-  
-            /* margin:500px 0; */
-            padding: 15px;
-        background-size: 100% auto;
-    color: black;
-    width: 80%;
-    margin: auto;
-    
-    background-color:#fefffe;
+#search-body {
+  /* margin:500px 0; */
+  padding: 15px;
+  background-size: 100% auto;
+  color: black;
+  width: 80%;
+  margin: auto;
+
+  background-color: #fefffe;
 }
-h1{
-     font-weight: bold !important;
+h1 {
+  font-weight: bold !important;
 }
-#search-body hr{
-    margin: 0;
-}
- 
-#hotel-option{
-    display: flex;
-    width: 100%;
-    margin: auto;
-    justify-content: center;
-}
-#hotel-option>div{
-    margin:0px 10px;
-    color: #007E8F;
-    padding: 0px 7px;
-    border:2px solid transparent;
-}
-#hotel-option>div:hover{
-    border-bottom: 2px solid #007E8F;
-    cursor: pointer;
-}
-#hotel-option>div:active{
-    color: #007E8F;
+#search-body hr {
+  margin: 0;
 }
 
-#hotel-option p{
- 
-        color: #616161;
-        font-size: 0.875rem;
-        font-weight: 700;
-            cursor: pointer;
-        line-height: 1.125rem;
-       
+#hotel-option {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
 }
-#hotel-option p:hover{
-    color: #007E8F;
+#hotel-option > div {
+  margin: 0px 10px;
+  color: #007e8f;
+  padding: 0px 7px;
+  border: 2px solid transparent;
 }
-hr{
-    margin: 0;
+#hotel-option > div:hover {
+  border-bottom: 2px solid #007e8f;
+  cursor: pointer;
+}
+#hotel-option > div:active {
+  color: #007e8f;
+}
+
+#hotel-option p {
+  color: #616161;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1.125rem;
+}
+#hotel-option p:hover {
+  color: #007e8f;
+}
+hr {
+  margin: 0;
 }
 /* #search{
     display: flex;
@@ -83,415 +79,499 @@ hr{
 
 
 } */
-.first-box{
-    width: 50% !important;
+.first-box {
+  width: 50% !important;
 }
-.sec-box{
-    width: 15% !important;
-
+.sec-box {
+  width: 15% !important;
 }
-.third-box{
-width: 15% !important;
+.third-box {
+  width: 15% !important;
 }
-.forth-box{
-width: 20% !important;
-}
-
-#check{
-    display: flex;
-}
-#searchDiv{
-    display: flex;
-        align-items: center;
-        width: 95%;
-        margin:10px auto;
-        /* position: relative; */
-      
-}
-#searchDiv>div{
-    appearance: none;
-    height: 50px;
-        background-color: #FFFFFF;
-        border: 1px solid #999999;
-        border-radius: 2px;
-        color: #1F1F1F;
-        font-size: 1rem;
-        font-weight: 400;
-        inline-size: 100%;
-        line-height: 1.25rem;
-        /* gap: 20px; */
-}
-#searchDiv>div:hover{
-    cursor: pointer;
-}
-#searchDiv input:hover{
-    cursor: pointer;
-}
-#para{
-    color:white;
-    width: 80% !important;
-    margin: auto;
-}
-.first-box,.sec-box,.third-box,.forth-box{
-    display: flex;
-    align-items: center;
-    padding: 5px;
- margin: 7px;
- height: 35px;
-}
-#searchDiv p{
-    margin: 0 10px;
-}
-.heading{
-    font-size: 12px;
-}
-.searchButton{
-    display: block;
-    margin:20px auto;
-    background-color: #c93258;
-    border: none;
-    width: 178px;
-    height: 48px;
-    padding:10px 20px;
-    color: white;
-    font-size: 17px;
-    font-weight: 700 !important;
+.forth-box {
+  width: 20% !important;
 }
 
- #searchDiv span{
-    margin-left: 10px;
+#check {
+  display: flex;
+}
+#searchDiv {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
+  /* position: relative; */
+}
+#searchDiv > div {
+  appearance: none;
+  height: 50px;
+  background-color: #ffffff;
+  border: 1px solid #999999;
+  border-radius: 2px;
+  color: #1f1f1f;
+  font-size: 1rem;
+  font-weight: 400;
+  inline-size: 100%;
+  line-height: 1.25rem;
+  /* gap: 20px; */
+}
+#searchDiv > div:hover {
+  cursor: pointer;
+}
+#searchDiv input:hover {
+  cursor: pointer;
+}
+#para {
+  color: white;
+  width: 80% !important;
+  margin: auto;
+}
+.first-box,
+.sec-box,
+.third-box,
+.forth-box {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 7px;
+  height: 35px;
+}
+#searchDiv p {
+  margin: 0 10px;
+}
+.heading {
+  font-size: 12px;
+}
+.searchButton {
+  display: block;
+  margin: 20px auto;
+  background-color: #c93258;
+  border: none;
+  width: 178px;
+  height: 48px;
+  padding: 10px 20px;
+  color: white;
+  font-size: 17px;
+  font-weight: 700 !important;
+}
 
+#searchDiv span {
+  margin-left: 10px;
 }
-#search{
-display: flex;
-flex-direction: column;
+#search {
+  display: flex;
+  flex-direction: column;
+}
+#check {
+  width: 94%;
+  margin: 5px auto;
+  color: #616161;
 
+  font-size: 0.875rem;
+  font-weight: 400;
 }
-#check{
-    width: 94%;
-    margin:5px auto;
-    color: #616161;
-    
-        font-size: 0.875rem;
-        font-weight: 400;
+#check > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2px;
 }
-#check>div{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-left:2px ;
+#check span {
+  margin-left: 10px;
 }
-#check span{
-    margin-left:10px ;
+#check > div:nth-child(2) {
+  margin-left: 20px;
 }
-#check>div:nth-child(2){
-    margin-left:20px;
+#check > div > input {
+  height: 18px;
+  width: 18px;
 }
-#check>div>input{
-    height: 18px;
-    width: 18px;
-}
- 
-#para>h2{
-    display: block !important;
-    margin: 30px auto 10px auto !important;
-        /* font-size: 1.17em; */
-        
-        font-weight: bold;
-}
-#para>p{
-    font-size: 18px;
-    width: 45%;
 
-}
-.button{
-    width: 110px;
-    height: 40px;
-    font-size: 16px;
-    border-color: #C7C7C7;
-        border-radius: 2px;
-        border-width: 1px;
-        background-color: #FFFFFF;
-        color: #007E8F;
-        font-weight: 500;
-}
-#container{
-    width: 82%;
-    margin: auto;
-}
-#travelPlan{
-    /* width: 81%; */
-    margin:20px auto;
-}
-#travelPlan> img{
-    width: 100%;
-    /* height: 20px; */
-}
-#featured{
-    /* width: 81%; */
-    margin: auto;
-}#featured>h1{
-    margin-bottom:0px ;
-}
-#featuredDiv{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    
-    color: white;
+#para > h2 {
+  display: block !important;
+  margin: 30px auto 10px auto !important;
+  /* font-size: 1.17em; */
 
+  font-weight: bold;
 }
- 
-#featuredDiv>:nth-child(1){
-    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
-        /* background-position: bottom; */
-       /* opacity: 0.8; */
-        background-repeat: no-repeat;
-        background-size: cover;
-      
-        /* width: 100%; */
-        height: 188px;
+#para > p {
+  font-size: 18px;
+  width: 45%;
+}
+.button {
+  width: 110px;
+  height: 40px;
+  font-size: 16px;
+  border-color: #c7c7c7;
+  border-radius: 2px;
+  border-width: 1px;
+  background-color: #ffffff;
+  color: #007e8f;
+  font-weight: 500;
+}
+#container {
+  width: 82%;
+  margin: auto;
+}
+#travelPlan {
+  /* width: 81%; */
+  margin: 20px auto;
+}
+#travelPlan > img {
+  width: 100%;
+  /* height: 20px; */
+}
+#featured {
+  /* width: 81%; */
+  margin: auto;
+}
+#featured > h1 {
+  margin-bottom: 0px;
+}
+#featuredDiv {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 
+  color: white;
 }
-#featuredDiv>:nth-child(2) {
-    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
-    /* background-position: bottom; */
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 100%; */
-    height: 188px;
+#featuredDiv > :nth-child(1) {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+  /* background-position: bottom; */
+  /* opacity: 0.8; */
+  background-repeat: no-repeat;
+  background-size: cover;
 
-}#featuredDiv>:nth-child(3) {
-    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
-    /* background-position: bottom; */
+  /* width: 100%; */
+  height: 188px;
+}
+#featuredDiv > :nth-child(2) {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+  /* background-position: bottom; */
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 100%; */
-    height: 188px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  height: 188px;
+}
+#featuredDiv > :nth-child(3) {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+  /* background-position: bottom; */
 
-}#featuredDiv>:nth-child(4) {
-    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
-    /* background-position: bottom; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  height: 188px;
+}
+#featuredDiv > :nth-child(4) {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=900&h=600&q=mediumHigh");
+  /* background-position: bottom; */
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 100%; */
-    height: 188px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  height: 188px;
+}
+#featuredDiv > div > div > h2 {
+  margin: 0;
+  font-size: 20px;
+}
+#featuredDiv > div > div > p {
+  margin: 5px 0px;
+}
+#featuredDiv > div {
+  position: relative;
+}
+#featuredDiv > div > div {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+}
+#todeals {
+  /* width: 81%; */
+  margin: 20px auto;
+}
+#backGround2 {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg");
+  background-position: center;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  object-fit: fill;
+  color: white;
+  height: 297px;
 }
-#featuredDiv>div>div>h2{
-     
-    margin: 0;
-    font-size: 20px;
+#backGround2 > div {
+  height: 100%;
+  background: rgb(0, 0, 0, 0.3);
+  position: relative;
+}
+#backGround2 > div > div {
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+}
+#backGround2 h4 {
+  margin: 0;
+}
+#backGround2 p {
+  margin-top: 5px;
+}
+#cancleTrip > img {
+  width: 100%;
+}
+#traveling {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+#traveling > div:nth-child(1) {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg");
+  background-position: center;
 
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  object-fit: fill;
+  color: white;
+  height: 240px;
 }
-#featuredDiv>div>div>p{
-    margin: 5px 0px;
-}
-#featuredDiv>div{
-    position: relative;
-}
-#featuredDiv>div>div{
-    position: absolute;
-    left: 10px;
-    bottom: 0;
-}
-#todeals{
-    /* width: 81%; */
-    margin:20px auto;
-}
-#backGround2{
-    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg");
-        background-position:center;
-      
-            background-repeat: no-repeat;
-                background-size: cover;
-                /* width: 100%; */
-                object-fit:fill;
-                color: white;
-height: 297px;
-}
-#backGround2>div{
-    height: 100%;
-    background: rgb(0,0,0,0.3);
-    position: relative;
-}
-#backGround2>div>div{
-    position: absolute;
-    bottom: 0;
-    left: 10px;
-}
-#backGround2 h4{
-    margin: 0;
-}
-#backGround2 p{
-    margin-top: 5px;
-}
-#cancleTrip>img{
-    width: 100%;
-}
-#traveling{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-}
-#traveling>div:nth-child(1){
-   background-image:url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_1199x399_20211117.jpg") ;
-    background-position: center;
-    
-        background-repeat: no-repeat;
-        background-size: cover;
-        /* width: 100%; */
-        object-fit: fill;
-        color: white;
-        height: 240px;
-   
-}
-#traveling>div:nth-child(2) {
-    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg");
-    background-position: center;
+#traveling > div:nth-child(2) {
+  background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_RoadTrips_imgB_1199x399_20211117.jpg");
+  background-position: center;
 
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* width: 100%; */
-    object-fit: fill;
-    color: white;
-    height: 240px;
-
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%; */
+  object-fit: fill;
+  color: white;
+  height: 240px;
 }
-#traveling h2{
-    margin-top:0px;
+#traveling h2 {
+  margin-top: 0px;
 }
-#traveling>div>div{
-    background: rgb(0,0,0,0.6);
-    /* height: 250px;
+#traveling > div > div {
+  background: rgb(0, 0, 0, 0.6);
+  /* height: 250px;
 
     margin: 0; */
-    
-    height: 100%;
-    top: 0;
-    position: relative;
-}
-#traveling>div>div>div{
-    position: absolute;
-    top: 25%;
-    left: 20px;
-}
-#app{
-    margin-top: 70px;
-}
-#app>img{
-width: 100%;
-}
-#moreDesti>img{
-    width: 100%;
-}
-#flightBox{
-    display: none;
-}
-#oneway{
-    display: flex;
-    justify-content: space-between;
-    width: 93.5%;
 
-    margin: auto;
-    
+  height: 100%;
+  top: 0;
+  position: relative;
 }
-#oneway div{
+#traveling > div > div > div {
+  position: absolute;
+  top: 25%;
+  left: 20px;
+}
+#app {
+  margin-top: 70px;
+}
+#app > img {
+  width: 100%;
+}
+#moreDesti > img {
+  width: 100%;
+}
+#flightBox {
+  display: none;
+}
+#oneway {
+  display: flex;
+  justify-content: space-between;
+  width: 93.5%;
+
+  margin: auto;
+}
+#oneway>div{
     display: flex;
-    /* padding: 5px 5px; */
-    align-items: center;
-    text-align: center;
-    margin-top:10px ;
-    /* justify-content: space-between; */
 }
-#oneway p{
-    font-size: 14px;
-    /* margin: auto 10px; */
-    /* margin-left: 20px;
+#oneway div {
+  /* display: flex; */
+  /* padding: 5px 5px; */
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  /* justify-content: space-between; */
+}
+#oneway p {
+  font-size: 14px;
+  /* margin: auto 10px; */
+  /* margin-left: 20px;
     margin-right:20px ; */
-    /* margin: 0; */
-    margin: 15px 20px;
-    /* margin:15px 5px; */
+  /* margin: 0; */
+  margin: 15px 20px;
+  /* margin:15px 5px; */
 }
-#oneway>div:nth-child(1){
-        color: #616161;
-            font-size: 0.875rem;
-            font-weight: 500;
-            line-height: 1.29;
+#oneway > div:nth-child(1) {
+  color: #616161;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.29;
 }
-#oneway>div:nth-child(1)>div:nth-child(1){
-    /* margin:0px 5px; */
-    border-radius: 2px;
-    color: #002f35;
+#oneway > div:nth-child(1) > div:nth-child(1) {
+  /* margin:0px 5px; */
+  border-radius: 2px;
+  color: #002f35;
 
-    background-color: #b3d8dc;
+  background-color: #b3d8dc;
 }
-#oneway>div:nth-child(1)>div:hover{
-background-color: #c8edf1;
+#oneway > div:nth-child(1) > div:hover {
+  background-color: #c8edf1;
 }
-#oneway>div:nth-child(2){
-        background-color: transparent;
-            color: #007E8F;
-            font-weight: 400;
-            text-decoration: none;  
-            font-size: 0.875rem;
+#oneway > div:nth-child(2) {
+  background-color: transparent;
+  color: #007e8f;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 0.875rem;
 }
 .first-box-flight {
-    width: 33% !important;
-  
-  
-}a{
-    text-decoration: none;
+  width: 33% !important;
+}
+a {
+  text-decoration: none;
 }
 
 .sec-box-flight {
-    width: 33% !important;
-
+  width: 33% !important;
 }
 
 .third-box-flight {
-    width: 15% !important;
+  width: 15% !important;
 }
 
 .forth-box-flight {
-    width: 15% !important;
+  width: 15% !important;
 }
 
- #carRenetel,#Packages,#thingsTodo,#Cruies{
-    display: none;
- }
- .dropdown-menu{
-    display: none;
- }
- #startDate,#endDate{
-    border: none;
-    width: 70%;
-    margin-left: 8.5px;
- }
- #startDate:focus{
-    outline: none;
- }
- #endDate:focus{
-    outline: none;
- }
+#carRenetel,
+#Packages,
+#thingsTodo,
+#Cruies {
+  display: none;
+}
+.dropdown-menu {
+  display: none;
+}
+#startDate,
+#endDate {
+  border: none;
+  width: 70%;
+  margin-left: 8.5px;
+}
+#startDate:focus {
+  outline: none;
+}
+#endDate:focus {
+  outline: none;
+}
 #goingTo,
-#leavingFrom{
-    border: none;
-        width: 150%;
-        margin-left: 8.5px;
-        height: 100%;
+#leavingFrom {
+  border: none;
+  width: 150%;
+  margin-left: 8.5px;
+  height: 100%;
 }
-#goingTo:focus{
-    outline: none;
+#goingTo:focus {
+  outline: none;
 }
-#leavingFrom:focus{
-    outline: none;
+#leavingFrom:focus {
+  outline: none;
 }
 
-@media screen and (max-width: 600px){
-
+@media screen and (max-width: 600px) {
 }
+@media (max-width: 1400px) {
+  #searchDiv {
+    width: 100%;
+  }
+  .first-box {
+    width: 40% !important;
+  }
+  .forth-box {
+    width: 25% !important;
+  }
+}
+@media (max-width: 1200px) {
+  #searchDiv {
+    justify-content: space-between;
+  }
+  .first-box {
+    width: 30% !important;
+  }
+  .sec-box {
+    width: 20% !important;
+  }
+  .third-box {
+    width: 20% !important;
+  }
+  .forth-box {
+    width: 25% !important;
+  }
+  #backGround {
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
+@media (max-width: 992px) {
+  #searchDiv {
+    flex-wrap: wrap;
+  }
+  .first-box {
+    width: 40% !important;
+  }
+
+  .sec-box {
+    width: 40% !important;
+  }
+
+  .third-box {
+    width: 40% !important;
+  }
  
+  .forth-box {
+    width: 40% !important;
+  }
+  #featuredDiv{
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media (max-width: 768px) {
+  #hotel-option {
+    flex-wrap: wrap;
+  }
+  #traveling{
+    grid-template-columns: repeat(1,1fr);
+}
+}
+
+@media (max-width: 576px) {
+  .first-box,
+  .sec-box,
+  .third-box,
+  .forth-box {
+    margin: 4px;
+  }
+  .first-box {
+    width: 100% !important;
+  }
+  #featuredDiv{
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  .sec-box {
+    width: 100% !important;
+  }
+
+  .third-box {
+    width: 100% !important;
+  }
+
+  .forth-box {
+    width: 100% !important;
+  }
+}
