@@ -37,13 +37,7 @@ document.getElementById("flightname").innerHTML= `${destflight.airline_iata}  ${
 
 document.getElementById("price").innerHTML = `$ ${destflight.flight_number + returnflight.flight_number}`
 
-// document.getElementById("completeBook").addEventListener("click", ()=>{
-//   alert("flight booked");
-//   // localStorage.setItem("flightbookingstatus", JSON.stringify("confirmed"));
 
-//   // window.location.href='../index.html';
-
-// })
 function completed(){
   alert("Flights Booked successfully")
   window.location.href = '../pages/index.html'
