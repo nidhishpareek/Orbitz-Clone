@@ -8,18 +8,12 @@
       "id": 1
     },
     {
-<<<<<<< HEAD
-      "email": "pareek.np1@gmail.com",
-      "firstName": "afsdfgdf",
-      "lastName": "gsdfg",
-      "password": "dfds",
-=======
       "email": "nevil@12",
       "firstName": "Kashiram",
       "lastName": "Shekhda",
       "password": "2010",
->>>>>>> 199d88935890c3ffcf663b4923759a9f51f1c957
       "id": 2
-    }
+    },
+
   ]
 }

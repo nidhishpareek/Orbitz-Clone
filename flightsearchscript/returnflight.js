@@ -253,7 +253,7 @@ function showflight(ele, flighthours, flightmins, dept, arr) {
 }
 
 function redirect() {
-  console.log("kashi")
+console.log("Page Made by Nidhish Pareek")
   window.location.href = "../Payment_page/payment.html";
 }
 

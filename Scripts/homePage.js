@@ -177,7 +177,7 @@ document.getElementById("searchButton").addEventListener("click", function () {
 
 document.getElementById("signOut").addEventListener("click",function(){
   localStorage.clear();
-  location.href="../Pages/index.html"
+  location.href="../index.html"
 });
  
  

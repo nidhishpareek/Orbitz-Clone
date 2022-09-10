@@ -270,7 +270,7 @@ document.getElementById("signOut").addEventListener("click", function () {
   location.href = "../Pages/index.html";
 });
 var object = JSON.parse(localStorage.getItem("userDetails")) || {};
-console.log("kashi")
+console.log("Page Made by Nidhish Pareek")
 document.getElementById("signIn").innerText = object.firstName;
 document.getElementById("userName").innerText = object.firstName;
 document.getElementById("emailOfuser").innerText = object.email;
