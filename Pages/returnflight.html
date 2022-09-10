@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Style/footer.css" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
     <link rel="stylesheet" href="../Style/commenenavbar.css" />
+    <link rel="stylesheet" href="../Style/index.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,300,1,200"
@@ -192,6 +193,31 @@
 
     <div class="container">
       <!-- SEARCH AND FILTER PORTIONS STARTS HERE -->
+      <div style="display: flex; align-items: center">
+        <div
+          id="searchDiv"
+          style="width: 82%; padding: 0; margin: 10px 15px"
+        ></div>
+        <div>
+          <button
+            style="
+              border: none;
+              display: block;
+              margin: 20px auto;
+              background-color: #c93258;
+              border: none;
+              width: 150px;
+              height: 48px;
+              padding: 10px 20px;
+              color: white;
+              font-size: 17px;
+              font-weight: 700 !important;
+            "
+          >
+            Search
+          </button>
+        </div>
+      </div>
 
       <div id="filtersandresults">
         <!-- FILTER PORTION -->
@@ -468,17 +494,26 @@
         </div>
       </div>
     </div>
+      <div id="app" style="width:80%; margin:10px auto">
+        <img
+          src="https://i.postimg.cc/qM76S7kT/Screenshot-2022-09-06-022211.png"
+          alt=""
+        />
+      </div>
     <div id="footer"></div>
   </body>
 </html>
 
-<script type="module">
+<script defer type="module">
   import { footer } from "../component/footer.js";
   import { navbarHome } from "../component/homePageNavbar.js";
-
-  document.getElementById("footer").innerHTML = footer();
+  import { searchDiv } from "../component/searchDiv.js";
 
   document.getElementById("navbar").innerHTML = navbarHome();
+  
+
+  document.getElementById("searchDiv").innerHTML = searchDiv();
+  document.getElementById("footer").innerHTML = footer();
 </script>
 
-<script src="../flightsearchscript/flightsearch.js"></script>
+<script defer src="../flightsearchscript/flightsearch.js"></script>

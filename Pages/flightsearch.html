@@ -26,7 +26,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../flightsearchcss/flightsearch.css" />
-    <link rel="stylesheet" href="../flightsearchcss/navbar.css">
+    <link rel="stylesheet" href="../flightsearchcss/navbar.css" />
     <!-- <link rel="stylesheet" href="../Style/commenenavbar.css" /> -->
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" /> -->
 
@@ -43,7 +43,7 @@
       integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
       crossorigin="anonymous"
     />
-    
+
     <title>Flight Search</title>
   </head>
 
@@ -196,13 +196,33 @@
       </div>
     </div>
 
-
-      <div id="searchbardiv"></div>
-
-
-
     <div class="container">
       <!-- SEARCH AND FILTER PORTIONS STARTS HERE -->
+      <div style="display: flex; align-items: center">
+        <div
+          id="searchDiv"
+          style="width: 82%; padding: 0; margin: 10px 15px"
+        ></div>
+        <div>
+          <button
+            style="
+              border: none;
+              display: block;
+              margin: 20px auto;
+              background-color: #c93258;
+              border: none;
+              width: 150px;
+              height: 48px;
+              padding: 10px 20px;
+              color: white;
+              font-size: 17px;
+              font-weight: 700 !important;
+            "
+          >
+            Search
+          </button>
+        </div>
+      </div>
 
       <div id="filtersandresults">
         <!-- FILTER PORTION -->
@@ -477,8 +497,15 @@
             </div>
           </div>
         </div>
+        
       </div>
     </div>
+    <div id="app" style="width:80%; margin:10px auto">
+        <img
+          src="https://i.postimg.cc/qM76S7kT/Screenshot-2022-09-06-022211.png"
+          alt=""
+        />
+      </div>
     <div id="footer"></div>
   </body>
 </html>
@@ -486,10 +513,11 @@
 <script defer type="module">
   import { footer } from "../component/footer.js";
   import { navbarHome } from "../component/homePageNavbar.js";
-
-  document.getElementById("footer").innerHTML = footer();
+  import { searchDiv } from "../component/searchDiv.js";
 
   document.getElementById("navbar").innerHTML = navbarHome();
+  document.getElementById("footer").innerHTML = footer();
+
+  document.getElementById("searchDiv").innerHTML = searchDiv();
 </script>
 <script defer src="../flightsearchscript/flightsearch.js"></script>
-

@@ -77,7 +77,7 @@ console.log(unixTimestamp);
 
 console.log(destinationobj.cityName, departingobj.cityName);
 var data_airlabs = new URLSearchParams({
-  api_key: "50fc71e2-d4d6-4d2b-89c3-0e68b04d8d38",
+  api_key: "10a31058-f6bc-4365-ae69-9f46bd241546",
   dep_iata: departingobj.airportCode,
   arr_iata: destinationobj.airportCode,
 });
@@ -88,7 +88,14 @@ searchflights();
 //////////////////////////////////////////////////////
 //////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////
-
+document.getElementById(
+  "goingTo"
+).value = `${destinationobj.cityName}(${destinationobj.airportCode}-${destinationobj.airportName})`;
+document.getElementById(
+  "leavingFrom"
+).value = `${destinationobj.cityName}(${departingobj.airportCode}-${departingobj.airportName})`;
+document.getElementById("startDate").value = startdate;
+document.getElementById("endDate").value = returndate;
 async function searchflights() {
   try {
     var res = await fetch(apiairlabs);

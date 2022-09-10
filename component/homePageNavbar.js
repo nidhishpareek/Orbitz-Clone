@@ -18,7 +18,7 @@ export const navbarHome = () => {
       <ul class="navbar-nav ms-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" style="background-color: #00253c;color:white; font-size: 13.125px; border: none;margin-left:20px" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            More option
+            More travel
           </a>
           <!-- Here's the magic. Add the .animate and .slideIn classes to your .dropdown-menu and you're all set! -->
           <div class="dropdown-menu dropdown-menu-end animate slideIn" aria-labelledby="navbarDropdown">
