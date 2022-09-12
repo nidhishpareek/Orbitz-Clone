@@ -29,21 +29,16 @@ const addData = async () => {
     console.log(obj)
 
 
-    fetch("http://localhost:3000/user", {
-       method: "POST",
-       body: JSON.stringify(obj),
-       headers: {
-         "Content-Type": "application/json",
-       }
-       
-  
-       
-    
-  }).then((res)=>{
-    alert("Sign in successfully");
-    localStorage.setItem("mail",1);
-     
-  });
+    fetch("https://orbiz-project.herokuapp.com/user", {
+      method: "POST",
+      body: JSON.stringify(obj),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((res) => {
+      alert("Sign in successfully");
+      localStorage.setItem("mail", 1);
+    });
    
   
    
@@ -51,7 +46,7 @@ const addData = async () => {
 }
 
 async function check(email){
-  var res= await fetch("http://localhost:3000/user");
+  var res = await fetch("https://orbiz-project.herokuapp.com/user");
   var res2=await res.json();
   var che=false
  var ans= res2.map((el)=>{
