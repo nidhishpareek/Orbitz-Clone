@@ -12,7 +12,7 @@ async function getToken(){
      alert("Please fill all details");
    } else{
    
-    var res = await fetch("http://localhost:3000/user");
+    var res = await fetch("https://orbiz-project.herokuapp.com/user");
    
     var res2=await res.json();
     var flag=false
